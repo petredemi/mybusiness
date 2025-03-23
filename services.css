@@ -30,7 +30,10 @@
     margin: 1px;
 }
 .port{
-    padding: 20px;
+    padding: 30px;
+}
+.port >p{
+    margin-left: 20px;
 }
 @media(max-width:450px){
     .portfolio >div> img{
