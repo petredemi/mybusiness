@@ -1,0 +1,42 @@
+.servicespage{
+    max-width: 1000px;
+    margin: auto;
+    min-height: 500px;
+}
+.servicespage p, h2{
+    line-height: 1.4;
+    margin: 1px;
+}
+.servicespage h4{
+    margin-top: 0px;
+    text-align: center;
+}
+.portfolio{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.portfolio > div{
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 1px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.portfolio >div> img{
+    min-width: 250px;
+    max-width: 450px;
+    margin: 1px;
+}
+.port{
+    padding: 20px;
+}
+@media(max-width:450px){
+    .portfolio >div> img{
+        width: 100%;
+        margin-left: 2px;
+        margin-right: 2px;
+        
+    }
+}
