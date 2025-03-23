@@ -110,7 +110,6 @@ nav >div:hover{
 }
 footer{
     display: flex;
-    position:fixed;
     flex-direction: column;
     height: auto;
     background-color: rgb(149, 144, 144);
