@@ -1,14 +1,19 @@
 body{
     margin: 0px;
+    position: relative;
 }
 
 h1{
     font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 10px;
+    margin-top: 1px;
     margin-bottom: 1px;
     color: aliceblue;
     height: fit-content;
+}
+h2{
+    margin-left: 20px;
+    color: aliceblue;
 }
 h3{
     font-size: 1.8rem;
@@ -17,8 +22,13 @@ h3{
     margin-bottom: 1px;
     height:fit-content;
 }
+
 .toppage{
-    background-color:darkturquoise;
+    background-color:rgb(0, 206, 209);
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
 
 }
 .top{
@@ -59,7 +69,7 @@ nav >div:hover{
     border: 4px solid darkblue;
     border-style: dashed;
     flex-wrap: wrap;
-    margin-left: 25px;
+    margin-left: 15px;
     padding: 10px;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -72,31 +82,38 @@ nav >div:hover{
 }
 .content{
     display: flex;
+    flex-direction: column;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1050px;
     min-height: 700px;
+    height: 90vh;
     background-image: url('pictures/laptopdesk1.jpg');
     background-size: cover;
     background-position: center;
     text-shadow: 1px 1px 1px black;
+    margin-top: 100px;
 
 }
 .by{
-    width: 90%;
     text-align: end;
-    padding: 5px;
+    margin: auto;
+    padding: 1px;
+    margin-top: 5px;
     color: rgb(215, 59, 59);
-    position: absolute;
-    max-width: 990px;
+    max-width: 1000px;
     margin-right: 10px;
     z-index: 1;
 }
 .intro{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(13, 13, 12, 0.52);
     max-width: 700px;
     margin: auto;
-    bottom: 50%;
+    top: 0%;
     padding: 10px;
     box-shadow: 2px 2px 2px black;
 
@@ -108,6 +125,25 @@ nav >div:hover{
     padding: 5px;
     color: aliceblue;
 
+}
+.content >h4{
+    font-size: 1.3rem;
+    color:white;
+    text-shadow: 2px 2px 1px black;
+    margin-bottom: 20px;
+}
+.firstpage_pictures{
+    display: flex;
+    margin-bottom: 40px;
+    overflow-x: scroll;
+    height: 180px;
+}
+.firstpage_pictures >img{
+    height: 150px;
+    margin: 10px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 3px rgb(18, 4, 4);
+    border-radius: 8px;
 }
 footer{
     display: flex;

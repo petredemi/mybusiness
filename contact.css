@@ -1,9 +1,10 @@
 .contactpage{
+    display: none;
     max-width: 900px;
-    min-height: 500px;
+    height: 65vh;
     padding: 20px;margin: auto;
     font-size: 1.1rem;
-    margin-top: 50px;
+    margin-top: 130px;
     margin-bottom: 100px;
 }
 .contactpage  p,h4{
