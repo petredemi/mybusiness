@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <script src="mybussines.js" defer></script>
     <title>dpc-webdesign</title>
 </head>
@@ -20,6 +21,8 @@
                     <div class="home" >Home</div>
                     <div class="serv">Services</div>
                     <div class="contact">AboutMe</div>
+                    <div class="form">Contact</div>
+
                 </nav>
             </div>
             <div class="by">by Petru Demian</div>
@@ -127,6 +130,39 @@
             </div>
 
         </div>
+        <div class="formpage">
+            <form action="exemple" method="post">
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="name">Name (required)</label>
+                            <input type="text" id="name" name="name" required placeholder="required">
+                        </li>
+                        <li>
+                            <label for="firma">Company:</label>
+                            <input type="text" id="firma" name="firma">
+                        </li>
+                        <li>
+                            <label for="tel" >Phone:</label>
+                            <input type="number" id="tel" name="tel">
+                        </li>
+                        <li>
+                            <label for="email">Email (required)</label>
+                            <input type="email" id="email" name="email" required placeholder="myemail@exemple.com">
+                        </li>
+                        <li style="margin-bottom: 1px;">Your Message:</li>
+                        <li style="margin-top: 1px;">
+                        <textarea rows="20" cols="60" id="msg" name="mesaj" placeholder="*leave your message here(required)" required></textarea>
+                        </li>
+                        <div id="btn">
+                           <button type="submit">Send</button>
+                        </div>
+                    </ul>
+                
+                </fieldset>
+       </form>
+
+        </div>
         <footer>
             <p>&copy;2025 DPC-Webdesign</p>
             <div class="email_phone">
@@ -142,3 +178,5 @@
         </footer>
 </body>
 </html>
+
+

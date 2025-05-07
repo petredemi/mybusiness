@@ -1,0 +1,35 @@
+.formpage{
+    display: none;
+    margin-top: 100px;
+    width: 100%;
+    
+}
+
+fieldset{
+    padding: 5px;
+    margin: auto;
+}
+
+form ul{
+    font-size: 0.9rem;
+    list-style:none;
+    min-width: 200px;
+    padding: 5px;
+}
+form{
+    width: auto;
+    margin: 0px;
+}
+form li{
+    margin: 5px;
+    display: flex;
+    max-width: 360px;
+    justify-content: space-between;
+}
+input{
+    min-width: 220px;
+}
+textarea{
+    max-width: 400px;
+    border: 1px solid black;
+}
