@@ -226,14 +226,17 @@ a{
         display: block;
     }
     nav{
-        max-width: 60px;
+        max-width: 70px;
         display: none;
         position:fixed;
         right: 0%;
         background-color:rgb(240, 235, 192);
         z-index: 2;
         padding: 8px;
-
+    }
+    nav >div{
+        margin: 6px;
+        padding: 3px;
     }
 }
 @media(max-width:420px){
