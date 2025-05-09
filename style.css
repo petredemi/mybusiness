@@ -52,14 +52,15 @@ nav{
 nav >div{
     margin-left: 10px;
     margin-bottom: 1px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     height: fit-content;
     color: rgb(6, 3, 113);
     text-shadow: 1px 1px 1px black;
+    padding: 2px;
 }
 nav >div:hover{
-    background-color: rgb(213, 211, 207);
+    background-color: rgb(246, 237, 143);
     color: rgb(122, 2, 181);
 }
 .logo-title{
@@ -75,7 +76,7 @@ nav >div:hover{
     height: auto;
     text-shadow: 2px 2px 2px rgb(4, 4, 4), 0 0 1em rgb(34, 5, 255);
     box-shadow: 1px 1px 10px black;
-    background: linear-gradient(45deg, transparent 160px, red 0);
+    background: linear-gradient(45deg, transparent 170px, red 0);
     max-width: 300px;
     background-color: blanchedalmond;
 }
@@ -217,20 +218,22 @@ a{
         max-width: 100%
     };
 }
-@media(max-width: 450px){
-    .dropmenu{
-        overflow-y: hidden;
-        
+@media(min-width: 500px){
+    nav{
+        display: flex;
     }
+}
+
+@media(max-width: 450px){
     .drop{
         display: block;
     }
     nav{
-        max-width: 70px;
+        max-width: 82px;
         display: none;
         position:fixed;
         right: 0%;
-        background-color:rgb(240, 235, 192);
+        background-color:rgb(141, 250, 203);
         z-index: 2;
         padding: 8px;
     }
@@ -244,5 +247,3 @@ a{
         margin-top: 150px;
     }
 }
-
-

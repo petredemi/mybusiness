@@ -13,8 +13,14 @@ const formpage = document.querySelector('div.formpage')
 const navbar = document.querySelector('nav')
 const dropmenu = document.querySelector('.dropmenu') 
 const toppage = document.querySelector('.toppage')
+
 let divwidth = toppage.offsetWidth
 console.log(divwidth)
+//if(window.matchMedia("min-width: 450px").matches){
+ //   navbar.setAttribute('style', 'display:flex')
+   // console.log('dfwedw')
+//}
+
 
 let menu = 0
 dropbtn.addEventListener('click', (e) => {
@@ -41,8 +47,7 @@ dropmenu.addEventListener('mouseleave', (e) => {
     navbar.setAttribute('style', 'display:none')
     }
 })
-
-
+//checkWidth()
 
 homebtn.addEventListener('click', (e) =>{
     firstpage.setAttribute('style', 'display:flex')
@@ -85,7 +90,7 @@ formbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
     servicespage.setAttribute('style', 'display: none')
     contactpage.setAttribute('style', 'display: none')
-    formpage.setAttribute('style', 'display: block')
+    formpage.setAttribute('style', 'display: flex')
 
 
     homebtn.setAttribute('style', 'color: darkblue')

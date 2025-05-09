@@ -31,7 +31,7 @@
 }
 .portfolio >div> img{
     min-width: 250px;
-    max-width: 450px;
+    max-width: 380px;
     margin: 1px;
 }
 .portfolio >div>img:hover{
