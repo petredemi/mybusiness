@@ -2,6 +2,8 @@
     display: none;
     margin-top: 100px;
     width: 100%;
+    max-width: 1000px;
+    margin: auto;
     
 }
 
@@ -18,18 +20,23 @@ form ul{
 }
 form{
     width: auto;
-    margin: 0px;
+    margin-top: 100px;
 }
 form li{
-    margin: 5px;
+    margin: 6px;
     display: flex;
     max-width: 360px;
     justify-content: space-between;
 }
 input{
     min-width: 220px;
+    border: 1px solid black;
 }
 textarea{
     max-width: 400px;
     border: 1px solid black;
+}
+#btn{
+    margin: 10px;
+    font-size: 1rem;
 }

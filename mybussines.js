@@ -3,12 +3,46 @@ const homebtn = document.querySelector('div.home')
 const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
 const formbtn = document.querySelector('div.form')
+const dropbtn = document.querySelector('.drop')
 
 
 const firstpage = document.querySelector('.firstpage')
 const contactpage = document.querySelector('div.contactpage')
 const servicespage = document.querySelector('div.servicespage') 
-const formpage = document.querySelector('div.formpage') 
+const formpage = document.querySelector('div.formpage')
+const navbar = document.querySelector('nav')
+const dropmenu = document.querySelector('.dropmenu') 
+const toppage = document.querySelector('.toppage')
+let divwidth = toppage.offsetWidth
+console.log(divwidth)
+
+let menu = 0
+dropbtn.addEventListener('click', (e) => {
+    
+        if(menu == 0){
+            navbar.setAttribute('style', 'display:flex')
+            menu = 1
+        }else{
+            navbar.setAttribute('style', 'display:none')
+            menu = 0
+        }
+})
+
+navbar.addEventListener('click', (e) => {
+    divwidth = toppage.offsetWidth
+    if(divwidth < 450){
+        navbar.setAttribute('style', 'display:none')
+        console.log(divwidth)
+    }
+})
+dropmenu.addEventListener('mouseleave', (e) => {
+    divwidth = toppage.offsetWidth
+    if(divwidth < 450){
+    navbar.setAttribute('style', 'display:none')
+    }
+})
+
+
 
 homebtn.addEventListener('click', (e) =>{
     firstpage.setAttribute('style', 'display:flex')

@@ -79,6 +79,16 @@ nav >div:hover{
     max-width: 300px;
     background-color: blanchedalmond;
 }
+.dropmenu{
+    text-align: end;
+}
+.drop{
+    display: none;
+}
+.drop >img{
+    height: 40px;
+    width: 40px;
+}
 .by{
     position:absolute;
     text-align: end;
@@ -87,9 +97,9 @@ nav >div:hover{
     max-width: 700px;
     margin:auto;
     margin-top: 4px;
-    z-index: 3;
+    z-index: 1;
     transform: translateY(-20px);
-    right: 0%;
+    right: 2%;
     margin-right: 10px;
 }
 .firstpage{
@@ -208,8 +218,22 @@ a{
     };
 }
 @media(max-width: 450px){
+    .dropmenu{
+        overflow-y: hidden;
+        
+    }
+    .drop{
+        display: block;
+    }
     nav{
         max-width: 60px;
+        display: none;
+        position:fixed;
+        right: 0%;
+        background-color:rgb(240, 235, 192);
+        z-index: 2;
+        padding: 8px;
+
     }
 }
 @media(max-width:420px){
