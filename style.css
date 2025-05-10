@@ -135,7 +135,7 @@ nav >div:hover{
     margin: auto;
     padding: 10px;
     box-shadow: 2px 2px 2px black;
-    margin-top: 100px;
+    margin-top: 120px;
 
 }
 .intro > p{
@@ -229,7 +229,7 @@ a{
 }
 @media(max-width: 820px){
     .firstpage{
-        background-image: url('./pictures/mobile.jpg');
+        background-image: url('./pictures/mobile1.jpg');
         background-size: cover;
         max-width: 700px;
         margin-top: 100px
@@ -245,11 +245,11 @@ a{
         background-size: cover;
         background-position:top;
         max-width: 700px;
-        margin-top: 80px;
+        margin-top: 50px;
 
     }
     .content{
-        margin-top: 70px;
+        margin-top: 40px;
     }
     .drop{
         display: block;
@@ -269,11 +269,6 @@ a{
     }
     .firstpage_webpages img{
         max-width: 360px;
-    }
-}
-@media(max-width:420px){
-    .firstpage{
-        margin-top: 50px;
     }
 }
 
