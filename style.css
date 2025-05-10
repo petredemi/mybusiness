@@ -1,10 +1,9 @@
 body{
     margin: 0px;
-    position: relative;
 }
 
 h1{
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 1px;
     margin-bottom: 1px;
@@ -30,7 +29,6 @@ h3{
     z-index: 2;
     top: 0;
     margin-bottom: 20px;
-
 }
 .top{
     padding: 10px;
@@ -42,6 +40,7 @@ h3{
 }
 nav{
     display: flex;
+    color: darkblue;
     flex-wrap: wrap;
     justify-content: end;
     align-items: center;
@@ -52,16 +51,15 @@ nav{
 nav >div{
     margin-left: 10px;
     margin-bottom: 1px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     height: fit-content;
-    color: rgb(6, 3, 113);
     text-shadow: 1px 1px 1px black;
     padding: 2px;
 }
 nav >div:hover{
     background-color: rgb(246, 237, 143);
-    color: rgb(122, 2, 181);
+    color: rgb(49, 138, 5);
 }
 .logo-title{
     display: flex;
@@ -71,8 +69,8 @@ nav >div:hover{
     flex-wrap: wrap;
     margin-left: 15px;
     padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 1px;
+    margin-top: 1px;
     height: auto;
     text-shadow: 2px 2px 2px rgb(4, 4, 4), 0 0 1em rgb(34, 5, 255);
     box-shadow: 1px 1px 10px black;
@@ -108,12 +106,11 @@ nav >div:hover{
     margin: auto;
     max-width: 1050px;
     min-height: 700px;
-    height: 90vh;
     background-size:cover;
     background-position: top;
     background-repeat: no-repeat;
     text-shadow: 1px 1px 1px black;
-    margin-top: 100px;
+    margin-top: 80px;
 
 }
 .content{
@@ -121,7 +118,6 @@ nav >div:hover{
     flex-direction: column;
     min-height: 700px;
     max-width: 100%;
-    height: 90vh;
     text-shadow: 1px 1px 1px black;
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.997)20%, rgba(255, 255, 255, 0.256),rgb(255, 255, 255));
 
@@ -138,6 +134,7 @@ nav >div:hover{
     top: 0%;
     padding: 10px;
     box-shadow: 2px 2px 2px black;
+    margin-top: 100px;
 
 }
 .intro > p{
@@ -154,6 +151,26 @@ nav >div:hover{
     text-shadow: 1px 1px 0px black;
     margin-bottom: 20px;
     margin-left: 10px;
+}
+.firstpage_webpages{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 40px;
+    overflow-x: scroll;
+}
+.firstpage_webpages  img{
+    max-width: 450px;
+    box-shadow: 1px 1px 3px black;
+}
+.firstpage_webpages > div{
+    display: block;
+    margin: 5px;
+}
+.firstpage_webpages h4{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    color: rgb(45, 16, 49);
+    font-size: 1.2rem;
 }
 .firstpage_pictures{
     display: flex;
@@ -173,11 +190,12 @@ footer{
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: rgb(149, 144, 144);
+    background-color: rgb(43, 30, 52);
     margin: auto;
     color: white;
     width: 100%;
     bottom: 0;
+    padding: 8px;
 }
 footer > p{
     margin: auto;
@@ -218,22 +236,17 @@ a{
         max-width: 100%
     };
 }
-@media(min-width: 500px){
-    nav{
-        display: flex;
-    }
-}
 
 @media(max-width: 450px){
     .drop{
         display: block;
     }
     nav{
-        max-width: 82px;
+        max-width: 100px;
         display: none;
         position:fixed;
         right: 0%;
-        background-color:rgb(141, 250, 203);
+        background-color:rgb(183, 159, 185);
         z-index: 2;
         padding: 8px;
     }
@@ -241,9 +254,13 @@ a{
         margin: 6px;
         padding: 3px;
     }
+    .firstpage_webpages img{
+        max-width: 360px;
+    }
 }
 @media(max-width:420px){
     .firstpage{
         margin-top: 150px;
     }
 }
+

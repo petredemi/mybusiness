@@ -14,17 +14,28 @@ const navbar = document.querySelector('nav')
 const dropmenu = document.querySelector('.dropmenu') 
 const toppage = document.querySelector('.toppage')
 
-let divwidth = toppage.offsetWidth
-console.log(divwidth)
-//if(window.matchMedia("min-width: 450px").matches){
- //   navbar.setAttribute('style', 'display:flex')
-   // console.log('dfwedw')
-//}
+let divwidth = toppage.offsetWidth //width of div - unused
 
+function mediaQ(x){
+    if(x.matches){
+        navbar.style.display = 'flex';
+        navbar.style.color = 'darkblue'
+    }else{
+        navbar.style.display = 'none'
+        navbar.style.color = 'white'
+    }
+}
+let x = window.matchMedia("(min-width: 451px")
+mediaQ(x)
+
+x.addEventListener('change', (e) => {
+    mediaQ(x)
+})
 
 let menu = 0
 dropbtn.addEventListener('click', (e) => {
-    
+    divwidth = toppage.offsetWidth
+    if(divwidth < 450){
         if(menu == 0){
             navbar.setAttribute('style', 'display:flex')
             menu = 1
@@ -32,13 +43,12 @@ dropbtn.addEventListener('click', (e) => {
             navbar.setAttribute('style', 'display:none')
             menu = 0
         }
+    }
 })
-
 navbar.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
     if(divwidth < 450){
         navbar.setAttribute('style', 'display:none')
-        console.log(divwidth)
     }
 })
 dropmenu.addEventListener('mouseleave', (e) => {
@@ -50,6 +60,7 @@ dropmenu.addEventListener('mouseleave', (e) => {
 //checkWidth()
 
 homebtn.addEventListener('click', (e) =>{
+    divwidth = toppage.offsetWidth
     firstpage.setAttribute('style', 'display:flex')
     servicespage.setAttribute('style', 'display: none')
     contactpage.setAttribute('style', 'display: none')
@@ -66,11 +77,10 @@ servbtn.addEventListener('click', (e) => {
     contactpage.setAttribute('style', 'display: none')
     formpage.setAttribute('style', 'display: none')
 
-    homebtn.setAttribute('style', 'color: darkblue')
     servbtn.setAttribute('style', 'color: red')
+    homebtn.setAttribute('style', 'color: darkblue')
     contactbtn.setAttribute('style', 'color: darkblue')
     formbtn.setAttribute('style', 'color: darkblue')
-
 })
 
 contactbtn.addEventListener('click', (e) => {
@@ -79,12 +89,10 @@ contactbtn.addEventListener('click', (e) => {
     contactpage.setAttribute('style', 'display: block')
     formpage.setAttribute('style', 'display: none')
 
-
+    contactbtn.setAttribute('style', 'color: red')
     homebtn.setAttribute('style', 'color: darkblue')
     servbtn.setAttribute('style', 'color: darkblue')
-    contactbtn.setAttribute('style', 'color: red')
     formbtn.setAttribute('style', 'color: darkblue')
-
 })
 formbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
@@ -92,10 +100,8 @@ formbtn.addEventListener('click', (e) => {
     contactpage.setAttribute('style', 'display: none')
     formpage.setAttribute('style', 'display: flex')
 
-
+    formbtn.setAttribute('style', 'color: red')
     homebtn.setAttribute('style', 'color: darkblue')
     servbtn.setAttribute('style', 'color: darkblue')
     contactbtn.setAttribute('style', 'color: darkblue')
-    formbtn.setAttribute('style', 'color: red')
-
 })
