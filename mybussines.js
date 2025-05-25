@@ -13,6 +13,7 @@ const formpage = document.querySelector('div.formpage')
 const navbar = document.querySelector('nav')
 const dropmenu = document.querySelector('.dropmenu') 
 const toppage = document.querySelector('.toppage')
+const menuicon = document.querySelector('.b')
 
 let divwidth = toppage.offsetWidth //width of div - unused
 

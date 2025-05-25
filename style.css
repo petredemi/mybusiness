@@ -2,7 +2,31 @@ body{
     margin: 0px;
     padding: 0px;
 }
-
+@font-face {
+    font-family: 'font-1';
+    src: url('./fonts/font-1.ttf');
+        font-weight: 700;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-2';
+    src: url('./fonts/font-2.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-3';
+    src: url('./fonts/font-3.ttf');
+        font-weight: 600;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'font-4';
+    src: 
+        url('./fonts/font-4.otf');
+        font-weight: 600;
+        font-style: normal;
+}
 h1{
     font-size: 2.1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -22,14 +46,57 @@ h3{
     margin-bottom: 1px;
     height:fit-content;
 }
+.h0{
+    font-size: 2.5rem;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 800;
+    display: flex;
+    align-items: baseline;
+    margin-left: 10px;
+}
+.h1{
+    padding: 0px;
+    text-shadow: 2px 2px 5px black;
+    font-weight: 800;
+    color: deeppink;
+}
+.h2{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transform: rotateZ(20deg);
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    height: fit-content;
 
+}
+.h3{
+    height: fit-content;
+    color: rgb(11, 188, 102);
+    text-shadow: 2px 2px 5px black;
+}
+.dot{
+    margin: 5px;
+    font-size: 0.5rem;
+    height: fit-content;
+}
+.h0 > h3{
+    font-size: 1.5rem;
+    color:rgb(4, 177, 239);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height:fit-content;
+    text-shadow: 1px 1px 0px black;
+    
+}
 .toppage{
-    background-color:rgb(0, 206, 209);
+    background-color:rgba(215, 216, 216, 0.473);
     position: fixed;
     width: 100vw;
     z-index: 2;
     top: 0;
     margin-bottom: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.342);
 }
 .top{
     padding: 10px;
@@ -85,8 +152,10 @@ nav >div:hover{
 }
 .drop{
     display: none;
+    border: none;
+    height: 3.5rem;
 }
-.drop >img{
+.dropf >img{
     height: 40px;
     width: 40px;
 }
@@ -106,18 +175,26 @@ nav >div:hover{
 .firstpage{
     background-image: url('./pictures/laptopdesk1.jpg');
     max-width: 1100px;
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     text-shadow: 1px 1px 1px black;
+    margin-top: 72px;
+
+}
+.first1{
+    font-size: 3.5rem;
+    background-color: rgba(255, 140, 0, 0);
+    color: darkorange;
+    margin: 20px;
 
 }
 .content{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
     min-height: 700px;
     max-width: 100%;
     text-shadow: 1px 1px 1px black;
@@ -128,22 +205,20 @@ nav >div:hover{
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     background-color: rgba(13, 13, 12, 0.456);
-    max-width: 700px;
-    margin: auto;
-    padding: 10px;
+    width: fit-content;
+    padding: 8px;
     box-shadow: 2px 2px 2px black;
-    margin-top: 130px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 5px;
 
 }
 .intro > p{
     margin: 1px;
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 5px;
-    color: aliceblue;
+    font-size: 1.1rem;
+    color: white;
 
 }
 .content >h4{
@@ -231,7 +306,7 @@ a{
         background-image: url('./pictures/mobile1.jpg');
         background-size: cover;
         max-width: 700px;
-        margin-top: 100px
+        margin-top: 74px
     }
     .content{
         max-width: 100%
@@ -244,20 +319,22 @@ a{
         background-size: cover;
         background-position:left;
         width: 100vw;
-        margin-top: 50px;
+        margin-top: 74px;
     }
     .content{
-        margin-top: 40px;
+        margin-top: 0px;
     }
     .drop{
-        display: block;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0);
+        align-items:center;
     }
     nav{
         max-width: 100px;
         display: none;
         position:fixed;
         right: 0%;
-        background-color:rgb(183, 159, 185);
+        background-color:rgb(231, 232, 232);
         z-index: 2;
         padding: 8px;
     }
@@ -266,7 +343,14 @@ a{
         padding: 3px;
     }
     .firstpage_webpages img{
-        max-width: 360px;
+        max-width: 340px;
+    }
+    .intro{
+        max-width: 340px;
+        margin: auto;
+    }
+    .first1{
+        font-size: 2rem;
     }
 }
 
