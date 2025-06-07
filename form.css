@@ -7,6 +7,11 @@
     flex-wrap: wrap;
     
 }
+h1{
+    color: darkcyan;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 0px black;
+}
 .optionalcontact{
     margin-left: 20px;
     max-width: 380px;
@@ -53,4 +58,9 @@ textarea{
     margin: 10px;
     font-size: 1rem;
     margin-bottom: 1px;
+}
+@media(max-width:1050px){
+    .formpage{
+        max-width: 700px;
+    }
 }

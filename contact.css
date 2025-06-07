@@ -32,3 +32,8 @@
     margin: 2px;
     line-height: 1.5;
 }
+@media(max-width:1050px){
+    .contactpage{
+        max-width: 700px;
+    }
+}
