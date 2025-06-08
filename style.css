@@ -133,10 +133,13 @@ nav >div{
     height: fit-content;
     text-shadow: 1px 1px 1px black;
     padding: 2px;
+    border-radius: 5px;
+    padding: 2px;
 }
 nav >div:hover{
-    background-color: rgb(143, 246, 146);
+    background-color: rgba(18, 2, 67, 0.281);
     color: rgb(49, 138, 5);
+    font-size: 1.3rem;
 }
 .logo-title{
     display: flex;
@@ -340,11 +343,13 @@ a{
         display: flex;
         background-color: rgba(255, 255, 255, 0);
         align-items:center;
+        border: 1px solid red;
     }
     nav{
-        max-width: 100px;
+        width: 150px;
         display: none;
         position:fixed;
+        flex-direction: column;
         right: 0%;
         background-color:rgba(239, 250, 247, 0.746);
         z-index: 2;
@@ -354,13 +359,20 @@ a{
         margin: 6px;
         padding: 3px;
     }
+    nav >div:hover{
+    background-color: rgba(18, 2, 67, 0.281);
+    color: rgb(49, 138, 5);
+    font-size: 1.3rem;
+}
+
     .firstpage_webpages img{
         max-width: 340px;
     }
     .intro{
-        max-width: 320px;
+        max-width: 80%;
         margin: auto;
         margin-top: 40px;
+        font-size: 1rem;
     }
     .first1{
         font-size: 2rem;
