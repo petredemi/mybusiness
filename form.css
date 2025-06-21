@@ -1,6 +1,5 @@
 .formpage{
     display: none;
-    margin-top: 100px;
     width: 100%;
     max-width: 1000px;
     margin: auto;
@@ -25,6 +24,7 @@ h1{
 fieldset{
     padding: 5px;
     margin: auto;
+    margin-top: 20px;
 }
 
 form ul{
