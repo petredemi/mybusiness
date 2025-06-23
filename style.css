@@ -105,7 +105,7 @@ body{
 }
 nav{
     display: flex;
-    color: darkblue;
+    color: rgb(20, 1, 39);
     flex-wrap: wrap;
     justify-content: end;
     align-items: center;
@@ -117,14 +117,13 @@ nav >div{
     margin-left: 15px;
     margin-bottom: 1px;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
     height: fit-content;
-    text-shadow: 1px 1px 4px black;
     border-radius: 5px;
     padding: 4px;
 }
 nav >div:hover{
-    background-color: rgba(145, 250, 192, 0.921);
+    background-color: rgba(128, 249, 184, 0.921);
     font-size: 1.4rem;
 }
 .logo-title{
@@ -232,7 +231,7 @@ nav >div:hover{
 }
 .content >h4{
     font-size: 1.6rem;
-    color:rgb(244, 238, 238);
+    color:rgb(229, 247, 222);
     text-shadow: 1px 1px 0px black;
     margin-bottom: 20px;
     margin-left: 10px;

@@ -17,6 +17,7 @@
 }
 .servicespage p{
     line-height: 1.4;
+
     margin: 1px;
     color: rgb(25, 5, 45);
 }
@@ -24,6 +25,9 @@
 .servicespage h4{
     margin-top: 0px;
     text-align: center;
+}
+.port p{
+    font-size: 0.92rem;
 }
 
 .portfolio{
