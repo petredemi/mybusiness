@@ -7,6 +7,14 @@
     margin-top: 72px;
     margin-bottom: 100px;
 }
+.name{
+    font-size: 2rem;
+    color: rgb(20, 2, 38);
+}
+.aboutme >img{
+    border: 2px solid rgb(21, 3, 63);
+    padding: 4px;
+}
 .contactpage  p,h4{
     margin: 3px;
     margin-top: 10px;

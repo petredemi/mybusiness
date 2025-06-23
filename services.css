@@ -6,15 +6,26 @@
     min-height: 500px;
     margin-top: 72px;
 }
-.servicespage p, h2{
+.exemp{
+    box-shadow: 1px 1px 6px rgb(28, 1, 35);
+    margin-left: 10px;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(145deg, white, rgba(12, 2, 21, 0.26), white);
+
+}
+.servicespage p{
     line-height: 1.4;
     margin: 1px;
+    color: rgb(25, 5, 45);
 }
 
 .servicespage h4{
     margin-top: 0px;
     text-align: center;
 }
+
 .portfolio{
     max-width: 1000px;
     display: flex;
