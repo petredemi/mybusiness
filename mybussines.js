@@ -20,13 +20,13 @@ let divwidth = toppage.offsetWidth //width of div - unused
 function mediaQ(x){
     if(x.matches){
         navbar.style.display = 'flex';
-        navbar.style.color = 'darkblue'
+        navbar.style.color = 'white'
     }else{
         navbar.style.display = 'none'
         navbar.style.color = 'white'
     }
 }
-let x = window.matchMedia("(min-width: 451px")
+let x = window.matchMedia("(min-width: 551px")
 mediaQ(x)
 
 x.addEventListener('change', (e) => {
@@ -36,7 +36,7 @@ x.addEventListener('change', (e) => {
 let menu = 0
 dropbtn.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
-    if(divwidth < 450){
+    if(divwidth < 550){
         if(menu == 0){
             navbar.setAttribute('style', 'display:flex')
             menu = 1
@@ -48,13 +48,13 @@ dropbtn.addEventListener('click', (e) => {
 })
 navbar.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
-    if(divwidth < 450){
+    if(divwidth < 550){
         navbar.setAttribute('style', 'display:none')
     }
 })
 dropmenu.addEventListener('mouseleave', (e) => {
     divwidth = toppage.offsetWidth
-    if(divwidth < 450){
+    if(divwidth < 550){
     navbar.setAttribute('style', 'display:none')
     }
 })
@@ -69,7 +69,7 @@ homebtn.addEventListener('click', (e) =>{
 
     homebtn.setAttribute('style', 'color: red')
     servbtn.setAttribute('style', 'color: darkblue')
-    contactbtn.setAttribute('style', 'color: darkblue')
+    contactbtn.setAttribute('style','color: darkblue')
     formbtn.setAttribute('style', 'color: darkblue')
 })
 servbtn.addEventListener('click', (e) => {
@@ -81,7 +81,7 @@ servbtn.addEventListener('click', (e) => {
     servbtn.setAttribute('style', 'color: red')
     homebtn.setAttribute('style', 'color: darkblue')
     contactbtn.setAttribute('style', 'color: darkblue')
-    formbtn.setAttribute('style', 'color: darkblue')
+    formbtn.setAttribute('style', 'color: drarkblue')
 })
 
 contactbtn.addEventListener('click', (e) => {
