@@ -68,9 +68,9 @@ homebtn.addEventListener('click', (e) =>{
     formpage.setAttribute('style', 'display: none')
 
     homebtn.setAttribute('style', 'color: red')
-    servbtn.setAttribute('style', 'color: darkblue')
-    contactbtn.setAttribute('style','color: darkblue')
-    formbtn.setAttribute('style', 'color: darkblue')
+    servbtn.setAttribute('style', 'color: white')
+    contactbtn.setAttribute('style','color:white')
+    formbtn.setAttribute('style', 'color: white')
 })
 servbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
@@ -79,9 +79,9 @@ servbtn.addEventListener('click', (e) => {
     formpage.setAttribute('style', 'display: none')
 
     servbtn.setAttribute('style', 'color: red')
-    homebtn.setAttribute('style', 'color: darkblue')
-    contactbtn.setAttribute('style', 'color: darkblue')
-    formbtn.setAttribute('style', 'color: drarkblue')
+    homebtn.setAttribute('style', 'color: white')
+    contactbtn.setAttribute('style', 'color:white')
+    formbtn.setAttribute('style', 'color: whitee')
 })
 
 contactbtn.addEventListener('click', (e) => {
@@ -91,9 +91,9 @@ contactbtn.addEventListener('click', (e) => {
     formpage.setAttribute('style', 'display: none')
 
     contactbtn.setAttribute('style', 'color: red')
-    homebtn.setAttribute('style', 'color: darkblue')
-    servbtn.setAttribute('style', 'color: darkblue')
-    formbtn.setAttribute('style', 'color: darkblue')
+    homebtn.setAttribute('style', 'color: white')
+    servbtn.setAttribute('style', 'color: white')
+    formbtn.setAttribute('style', 'color: white')
 })
 formbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
@@ -102,7 +102,7 @@ formbtn.addEventListener('click', (e) => {
     formpage.setAttribute('style', 'display: flex')
 
     formbtn.setAttribute('style', 'color: red')
-    homebtn.setAttribute('style', 'color: darkblue')
-    servbtn.setAttribute('style', 'color: darkblue')
-    contactbtn.setAttribute('style', 'color: darkblue')
+    homebtn.setAttribute('style', 'color: white')
+    servbtn.setAttribute('style', 'color: white')
+    contactbtn.setAttribute('style', 'color:white')
 })
