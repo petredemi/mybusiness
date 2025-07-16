@@ -38,7 +38,9 @@
 }
 .contactpage > .aboutme >p {
     margin: 2px;
+    font-size: 0.9rem;
     line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media(max-width:1050px){
     .contactpage{
