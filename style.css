@@ -1,6 +1,7 @@
 body{
     margin: 0px;
-    padding: 0px;
+    padding: 1px;
+    width: 100vw;
     background-color: rgb(250, 240, 250);
 }
 @font-face {
@@ -162,13 +163,9 @@ nav >div:hover{
     margin-right: 10px;
     margin-bottom: 10px;
 }
-.backk{
-    background-size:contain;
-    background-position:rright;
-    background-repeat: repeat;
-    background-image: url('./pictures/mobile1.jpg');
-    margin-top: 60px;
-
+.back{
+    margin: 0px;
+    margin-top: 40px;
 }
 .firstpage{
     background-image: urll('./pictures/mobile1.jpg');
