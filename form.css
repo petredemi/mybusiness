@@ -19,10 +19,10 @@ h1{
     padding-top: 20px;
 }
 .optionalcontact p {
-    margin: 2px;
+    margin: 0px;
 }
 fieldset{
-    padding: 5px;
+    padding: 2px;
     margin: auto;
     margin-top: 20px;
 }
@@ -30,12 +30,13 @@ fieldset{
 form ul{
     font-size: 0.9rem;
     list-style:none;
-    min-width: 200px;
+    min-width: 190px;
     padding: 5px;
     margin-bottom: 5px;
 }
 form{
     width: auto;
+    margin: 0px;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
