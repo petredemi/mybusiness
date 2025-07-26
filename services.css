@@ -6,13 +6,27 @@
     min-height: 500px;
     margin-top: 72px;
 }
+.port{
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.port >h3{
+    color: black;
+    font-size: 1.2rem;
+}
+.port >p{
+    margin-left: 20px;
+}
 .exemp{
     box-shadow: 1px 1px 6px rgb(28, 1, 35);
     margin: 20px;
-    max-width: 500px;
+    width: 380px;
     padding: 10px;
-    border-radius: 10px;
-    background-image: linear-gradientt(145deg, white, rgba(12, 2, 21, 0.26), white);
+    border-radius: 5px;
+    border-left: 8px solid darkorange;
+    background-image: linear-gradient(145deg, white, rgba(12, 2, 21, 0.26), white);
 
 }
 .servicespage p{
@@ -52,16 +66,6 @@
 }
 .portfolio >div>img:hover{
     opacity: 50%;
-}
-.port{
-    padding: 30px;
-}
-.port >h3{
-    color: black;
-    font-size: 1.2rem;
-}
-.port >p{
-    margin-left: 20px;
 }
 @media(max-width:450px){
     .portfolio >div> img{
