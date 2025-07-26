@@ -180,8 +180,11 @@ nav >div:hover{
 }
 .background1{
     background-color: rgb(33, 11, 68);
-    background-image: url('./projectsimg/backgroundsea.jpg');
-    height: 330px;
+    background-image: url('./projectsimg/backgroundfloor1.jpg');
+    background-size:contain;
+    background-position:center;
+
+    height: 300px;
     width: 100vw;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -200,7 +203,7 @@ nav >div:hover{
 .content{
     margin: auto;
     width: 900px;
-    margin-top: 70px;
+    margin-top: 50px;
     background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.997)40%, rgba(255, 254, 254, 0.294), white);
 }
 .head1{
@@ -450,8 +453,9 @@ a{
     float: left;
     transform: translateY(2px);
     color: rgb(251, 56, 56);
-    text-shadow: 1px 1px 0px black;
-    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
     display: flex;
     justify-content: left;
     align-items: center;
