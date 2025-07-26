@@ -181,7 +181,7 @@ nav >div:hover{
 .background1{
     background-color: rgb(33, 11, 68);
     background-image: url('./projectsimg/backgroundfloor1.jpg');
-    background-size:contain;
+    background-size:cover;
     background-position:center;
 
     height: 300px;
