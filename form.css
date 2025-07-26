@@ -1,8 +1,10 @@
 .formpage{
     display: none;
-    max-width: 1000px;
-    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
     
 }
 h1{
@@ -10,23 +12,16 @@ h1{
     font-size: 1.3rem;
     text-shadow: 1px 1px 0px black;
 }
-.optionalcontact{
-    margin-left: 20px;
-    max-width: 380px;
-    padding: 5px;
-    margin-bottom: 20px;
-    padding-top: 20px;
-}
-.optionalcontact p {
-    margin: 0px;
+form{
+    margin-top: 40px;
+    width: fit-content;
 }
 fieldset{
     padding: 5px;
-    margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: antiquewhite;
+    border: 1px solid green;
 }
-
 form ul{
     font-size: 0.9rem;
     list-style:none;
@@ -34,18 +29,23 @@ form ul{
     padding: 5px;
     margin-bottom: 5px;
 }
-form{
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
 form li{
     margin: 4px;
     display: flex;
     max-width: 340px;
     justify-content: space-between;
 }
+.optionalcontact{
+    margin-left: 0px;
+    max-width: 380px;
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.optionalcontact p {
+    margin: 0px;
+}
+
 input{
     min-width: 200px;
     border: 1px solid black;
@@ -61,7 +61,7 @@ textarea{
     margin-bottom: 1px;
 }
 @media(max-width:1050px){
-    .formpage{
+    .formpagex{
         max-width: 700px;
     }
 }

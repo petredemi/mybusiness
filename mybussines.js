@@ -99,7 +99,7 @@ formbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
     servicespage.setAttribute('style', 'display: none')
     contactpage.setAttribute('style', 'display: none')
-    formpage.setAttribute('style', 'display: flex')
+    formpage.setAttribute('style', 'display: flex;')
 
     formbtn.setAttribute('style', 'color: red')
     homebtn.setAttribute('style', 'color: white')
