@@ -1,6 +1,5 @@
 .formpage{
     display: none;
-    width: 95%;
     max-width: 1000px;
     margin: auto;
     flex-wrap: wrap;
@@ -22,7 +21,7 @@ h1{
     margin: 0px;
 }
 fieldset{
-    padding: 2px;
+    padding: 5px;
     margin: auto;
     margin-top: 20px;
     background-color: antiquewhite;
@@ -37,22 +36,23 @@ form ul{
 }
 form{
     margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
 form li{
-    margin: 6px;
+    margin: 4px;
     display: flex;
-    max-width: 350px;
+    max-width: 340px;
     justify-content: space-between;
 }
 input{
-    min-width: 220px;
+    min-width: 200px;
     border: 1px solid black;
 }
 textarea{
     max-width: 400px;
+    padding: 5px;
     border: 1px solid black;
 }
 #btn{

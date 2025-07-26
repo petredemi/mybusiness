@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 1px;
     width: 100vw;
-    background-color: rgb(250, 240, 250);
+    background-color: rgb(252, 248, 252);
 }
 @font-face {
     font-family: 'font-1';
@@ -90,7 +90,7 @@ body{
     
 }
 .toppage{
-    background-color:rgba(27, 8, 48, 0.836);
+    background-color:rgb(27, 8, 48);
     position: fixed;
     width: 100vw;
     z-index: 2;
@@ -165,7 +165,7 @@ nav >div:hover{
 }
 .back{
     margin: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .firstpage{
     background-image: urll('./pictures/mobile1.jpg');
@@ -175,12 +175,12 @@ nav >div:hover{
     background-size:contain;
     background-position:right;
     background-repeat: no-repeat;
-    margin-top: 0px;
+    margin-top: 60px;
 
 }
 .background1{
     background-color: rgb(33, 11, 68);
-    height: 300px;
+    height: 320px;
     width: 100vw;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -198,8 +198,8 @@ nav >div:hover{
 }
 .content{
     margin: auto;
-    width:900px;
-    margin-top: 80px;
+    width: 900px;
+    margin-top: 90px;
     background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.997)40%, rgba(255, 254, 254, 0.294), white);
 }
 .head1{
