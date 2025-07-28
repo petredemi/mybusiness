@@ -1,4 +1,3 @@
-
 const homebtn = document.querySelector('div.home')
 const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
@@ -6,11 +5,11 @@ const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
 
 let myimage = document.querySelector('#myimage')
-const a = './pictures/designerdesk.jpg';
+const aa = './pictures/designerdesk.jpg';
 const b = './pictures/laptopondesk.jpg';
 const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
-const laptop = [a, b, c, d]
+const laptop = [aa, b, c, d]
 let run = 0;
 function changeimg(){
     if( run == 4){ run = 0}
