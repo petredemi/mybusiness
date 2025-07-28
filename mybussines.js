@@ -4,6 +4,7 @@ const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
 const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
+
 let myimage = document.querySelector('#myimage')
 const a = './pictures/designerdesk.jpg';
 const b = './pictures/laptopondesk.jpg';
@@ -16,7 +17,7 @@ function changeimg(){
     myimage.src = laptop[run]
     run += 1
 }
-setInterval(changeimg, 4000)
+setInterval(changeimg, 4000);
 
 const firstpage = document.querySelector('.firstpage')
 const contactpage = document.querySelector('div.contactpage')

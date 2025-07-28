@@ -140,7 +140,8 @@ nav >div:hover{
 .drop{
     display: none;
     border: none;
-    height: 3rem;
+    height: 2.4rem;
+    z-index: 3;
 }
 .dropf >img{
     height: 40px;
@@ -429,6 +430,7 @@ a{
         background-color: rgba(222, 196, 196, 0);
         align-items:center;
         color: aliceblue;
+        z-index: 3;
     }
     nav{
         width: 170px;
