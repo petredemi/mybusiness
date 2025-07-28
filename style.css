@@ -236,7 +236,7 @@ nav >div:hover{
     display: flex;
     align-items: center;
 }
-.head2 >img{
+#myimage{
     max-width: 430px;
 }
 .head2 >p{

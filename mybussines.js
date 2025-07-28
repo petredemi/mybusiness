@@ -4,7 +4,19 @@ const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
 const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
-
+let myimage = document.querySelector('#myimage')
+const a = './pictures/designerdesk.jpg';
+const b = './pictures/laptopondesk.jpg';
+const c = './pictures/laptoppink.jpg';
+const d = './pictures/laptopgraph.jpg';
+const laptop = [a, b, c, d]
+let run = 0;
+function changeimg(){
+    if( run == 4){ run = 0}
+    myimage.src = laptop[run]
+    run += 1
+}
+setInterval(changeimg, 4000)
 
 const firstpage = document.querySelector('.firstpage')
 const contactpage = document.querySelector('div.contactpage')
