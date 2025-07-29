@@ -5,16 +5,16 @@ const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
 
 let myimage = document.querySelector('#myimage')
-const aa = './pictures/designerdesk.jpg';
+const a = './pictures/designerdesk.jpg';
 const b = './pictures/laptopondesk.jpg';
 const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
-const laptop = [aa, b, c, d]
-let run = 0;
+const laptop = [a, b, c, d]
+let r = 0;
 function changeimg(){
-    if( run == 4){ run = 0}
-    myimage.src = laptop[run]
-    run += 1
+    if( r == 4){ r = 0}
+    myimage.src = laptop[r]
+    r += 1
 }
 setInterval(changeimg, 4000);
 
