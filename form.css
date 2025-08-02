@@ -35,6 +35,9 @@ form li{
     max-width: 340px;
     justify-content: space-between;
 }
+.team >h4{
+    text-shadow: 1px 1px 1px black;
+}
 .optionalcontact{
     margin-left: 0px;
     max-width: 380px;

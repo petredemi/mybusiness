@@ -109,60 +109,43 @@ body{
 }
 nav{
     display: flex;
-    flex-wrap: wrap;
     justify-content: end;
     align-items: center;
     margin-left: 50px;
-    margin-right: 10px;
+    margin-right: 0px;
     height: fit-content;
+    margin: 1px;
 }
 nav >div{
-    margin-left: 15px;
+    margin-left: 10px;
     margin-bottom: 1px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.1rem;
     color:whitesmoke;
-    font-weight: 500;
+    font-weight: 600;
     height: fit-content;
     border-radius: 5px;
     padding: 2px;
 }
 nav >div:hover{
     background-color: rgba(4, 154, 74, 0.921);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    transition: all 500ms;
 }
 .logo-titlees{
     background: linear-gradient(45deg, transparent 170px, red 0);
 }
 .dropmenu{
     text-align: end;
+
 }
 .drop{
     display: none;
     border: none;
     height: 2.4rem;
-    z-index: 5;
-}
-.dropf >img{
-    height: 40px;
-    width: 40px;
 }
 .b{
     color: white;
-}
-.by{
-    position:absolute;
-    text-align: end;
-    font-size: 0.9rem;
-    color: rgb(0, 0, 0);
-    max-width: 700px;
-    margin:auto;
-    margin-top: 4px;
-    z-index: 1;
-    transform: translateY(-20px);
-    right: 2%;
-    margin-right: 10px;
-    margin-bottom: 10px;
 }
 .back{
     margin: 0px;
@@ -232,8 +215,32 @@ nav >div:hover{
     align-items: center;
     margin-top: 10px;
 }
-.head2{
+.scroll{
+    overflow: hidden;
     margin-top: 60px;
+    margin-bottom: 10px;
+    background-color: gainsboro;
+}
+.scrolltext{
+    font-size: 1.1rem;
+    margin: 2px;
+    width: fit-content;
+    text-wrap: nowrap;
+    animation-name: runing;
+    animation-duration: 25s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes runing{
+    from{translate: -100%}
+    to{
+       translate:100vw;
+    }
+}
+.head2{
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -433,16 +440,16 @@ a{
         z-index: 5;
     }
     nav{
-        width: 170px;
-        height: 270px;
-        display: none;
+        width: 0px;
+        height: 240px;
         position:fixed;
         flex-direction: column;
         justify-content: center;
-        right: -10px;
+        flex-wrap: wrap;
+        right: 0;
+        top: 50px;
         background-color:rgba(24, 24, 68, 0.751);
         z-index: 2;
-        padding: 8px;
     }
     nav >div{
         margin: 6px;
@@ -453,7 +460,7 @@ a{
     background-color: rgba(106, 232, 144, 0.95);
     color: rgb(244, 250, 127);
     font-size: 1.3rem;
-}
+    }
 
     .firstpage_webpages img{
         max-width: 340px;

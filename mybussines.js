@@ -9,14 +9,31 @@ const a = './pictures/designerdesk.jpg';
 const b = './pictures/laptopondesk.jpg';
 const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
+
+const a0 = './pictures/2appledesktops.jpg'
+const a1 = './pictures/designroom.jpg'
+const a2 = './pictures/flowersondesck.jpg'
+const a3 = './pictures/interiordesign11.jpg'
+const a4 = './pictures/ligthonwall.jpg'
+const a5 = './pictures/iconsmediaapps.jpg'
+const a6 = './pictures/plumberworking.jpg'
+const a7 = './pictures/renewablepannels.jpg'
+const a8 = './pictures/restaurantplateswithfood.jpg'
+const a9 = './pictures/painterroll.jpg'
+const a10 = './pictures/hairstylewoman.jpg'
+const a11 = './pictures/drone.jpg';
+const a12 = './pictures/cameras.jpg'
+
 const laptop = [a, b, c, d]
-let r = 0;
+const picturemix = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12]
+let run = 0;
 function changeimg(){
-    if( r == 4){ r = 0}
-    myimage.src = laptop[r]
-    r += 1
+    if( run == 13){ run = 0}
+    myimage.src = picturemix[run]
+  //  myimage.setAttribute('style', 'max-width: 450px; transition: width 1s')
+    run += 1
 }
-setInterval(changeimg, 4000);
+setInterval(changeimg, 4000)
 
 const firstpage = document.querySelector('.firstpage')
 const contactpage = document.querySelector('div.contactpage')
@@ -28,46 +45,50 @@ const toppage = document.querySelector('.toppage')
 const menuicon = document.querySelector('.b')
 
 let divwidth = toppage.offsetWidth //width of div - unused
-
-function mediaQ(x){
-    if(x.matches){
-        navbar.style.display = 'flex';
-        navbar.style.color = 'white'
-    }else{
-        navbar.style.display = 'none'
-        navbar.style.color = 'white'
-    }
-}
-let x = window.matchMedia("(min-width: 551px")
-mediaQ(x)
-
-x.addEventListener('change', (e) => {
-    mediaQ(x)
-})
-
+//function mediaQ(x){
+//    divwidth = toppage.offsetWidth 
+//    if(x.matches){
+//        navbar.style.display = 'flex';
+//        navbar.style.color = 'white'
+//    }else{
+//        navbar.style.display = 'none'
+//        navbar.style.color = 'white'
+//    }
+//    console.log(x)
+//}
+//let x = window.matchMedia("(min-width: 551px")
+//mediaQ(x)
+//
+//toppage.addEventListener('change', (e) => {
+//    divwidth = toppage.offsetWidth 
+//    console.log('sdwsdwe')
+//
+//  //  mediaQ(x)
+//})
+//console.log(divwidth)
 let menu = 0
 dropbtn.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
     if(divwidth < 550){
         if(menu == 0){
-            navbar.setAttribute('style', 'display:flex')
+            navbar.setAttribute('style', 'width:160px; transition: width 1s;')
             menu = 1
         }else{
-            navbar.setAttribute('style', 'display:none')
+            navbar.setAttribute('style', 'width: 0px; transition: width 1s;')
             menu = 0
         }
     }
 })
 navbar.addEventListener('click', (e) => {
-    divwidth = toppage.offsetWidth
+    divwidth = toppage.offsetWidth;
     if(divwidth < 550){
-        navbar.setAttribute('style', 'display:none')
+        navbar.setAttribute('style', 'display:flex; width:0px; transition: width 1s;')
     }
 })
 dropmenu.addEventListener('mouseleave', (e) => {
     divwidth = toppage.offsetWidth
     if(divwidth < 550){
-    navbar.setAttribute('style', 'display:none')
+    navbar.setAttribute('style', 'width:0px; transition: width 1s;')
     }
 })
 //checkWidth()
