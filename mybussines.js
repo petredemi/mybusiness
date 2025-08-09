@@ -11,7 +11,7 @@ const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
 
 const a0 = './pictures/2appledesktops.jpg'
-const a1 = './pictures/designroom.jpg'
+const a1 = './pictures/designroom1.jpg'
 const a2 = './pictures/flowersondesck.jpg'
 const a3 = './pictures/interiordesign11.jpg'
 const a4 = './pictures/ligthonwall.jpg'
@@ -71,7 +71,7 @@ dropbtn.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
     if(divwidth < 550){
         if(menu == 0){
-            navbar.setAttribute('style', 'width:160px; transition: width 1s;')
+            navbar.setAttribute('style', 'width:160px; transition: width 1s; z-index:3;')
             menu = 1
         }else{
             navbar.setAttribute('style', 'width: 0px; transition: width 1s;')
