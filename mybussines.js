@@ -1,9 +1,16 @@
+//const finnhubPetru = new finnhub.DefaultApi('d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg')
+
+//finnhubPetru.stockTick("AAPL", "2025-08-08", 500, 0, (error, data, response) => {
+    //console.log(data);
+//});
 const homebtn = document.querySelector('div.home')
 const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
 const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
-
+//let apikey = GZ525I3MQ8WMVOXK  //alpha vantage.co 
+// finnhab apikey = d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg
+//finnhab secret : d2c3hr9r01qvh3vdtotg
 let myimage = document.querySelector('#myimage')
 const a = './pictures/designerdesk.jpg';
 const b = './pictures/laptopondesk.jpg';
@@ -139,3 +146,103 @@ formbtn.addEventListener('click', (e) => {
     servbtn.setAttribute('style', 'color: white')
     contactbtn.setAttribute('style', 'color:white')
 })
+
+async function stockPrice(){
+    try{
+       const response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=GOOG&interval=5min&apikey=GZ525I3MQ8WMVOXK&datatype=json', {mode:'cors'});
+       const stock = await response.json();
+       //let ss = JSON.parse(stock);
+       console.log(stock)
+       const met = stock['Meta Data']['2. Symbol']
+       console.log(met)
+       let ss = Object.values(stock)
+       let aa = Object.values(ss[1])
+     //  console.log(aa[1])
+        if(!response.ok){
+            throw 'no data'
+        }else{
+           // console.log(stock);
+            console.log(typeof stock)
+         //   console.log(ss)
+        }
+    }catch(error){
+        console.log(error)
+    };
+}
+
+let simbol1 = document.querySelector('div.simbol1')
+let price1 = document.querySelector('div.price1')
+let procent1 = document.querySelector('div.procent1')
+let img1 = document.querySelector('#img1')
+
+let simbol2 = document.querySelector('div.simbol2')
+let price2 = document.querySelector('div.price2')
+let procent2 = document.querySelector('div.procent2')
+let img2 = document.querySelector('#img2')
+
+let simbol3 = document.querySelector('div.simbol3')
+let price3 = document.querySelector('div.price3')
+let procent3 = document.querySelector('div.procent3')
+let img3 = document.querySelector('#img3')
+
+let simbol4 = document.querySelector('div.simbol4')
+let price4 = document.querySelector('div.price4')
+let procent4 = document.querySelector('div.procent4')
+let img4 = document.querySelector('#img4')
+
+let simbol5 = document.querySelector('div.simbol5')
+let price5 = document.querySelector('div.price5')
+let procent5 = document.querySelector('div.procent5')
+let img5 = document.querySelector('#img5')
+
+let simbol6 = document.querySelector('div.simbol6')
+let price6 = document.querySelector('div.price6')
+let procent6 = document.querySelector('div.procent6')
+let img6 = document.querySelector('#img6')
+
+let simbol7 = document.querySelector('div.simbol7')
+let price7 = document.querySelector('div.price7')
+let procent7 = document.querySelector('div.procent7')
+let img7 = document.querySelector('#img7')
+
+let igr = './icons/trianglered.png'
+let igg = './icons/trianglegreen.png'
+
+
+const symbols = [simbol1, simbol2, simbol3, simbol4, simbol5, simbol6, simbol7 ]
+const prices = [price1, price2, price3, price4, price5, price6, price7]
+const procent = [procent1, procent2, procent3, procent4, procent5, procent6, procent7]
+const imgs = [img1, img2, img3, img4, img5, img6, img7]
+
+async function finnhubPrice(x, n){
+    try{
+       const response = await fetch(`https://finnhub.io/api/v1/quote?symbol=${x}&exchange=US&token=d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg`, {mode:'cors'});
+       const stock = await response.json();      
+        if(!response.ok){
+            throw 'no data'
+        }else{
+            console.log(stock)
+        //    console.log(stock.c)
+       // console.log(close)
+            let trend = stock.dp
+            symbols[n].textContent = x + ':'
+            prices[n].textContent = stock.c;
+            procent[n].textContent = stock.dp.toFixed(2) + '%'
+            console.log(trend)
+            if(stock.dp > 0){
+            imgs[n].src = igg
+            }else if (stock.dp < 0){
+                imgs[n].src = igr
+            }
+        }
+    }catch(error){
+        console.log(error)
+    };
+}
+finnhubPrice('AMZN', 0)
+finnhubPrice('AAPL', 1)
+finnhubPrice('GOOG', 2)
+finnhubPrice('META', 3)
+finnhubPrice('TSLA', 4)
+finnhubPrice('NVDA', 5)
+finnhubPrice('MSFT', 6)

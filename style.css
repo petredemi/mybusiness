@@ -217,7 +217,6 @@ nav >div:hover{
 }
 .scroll{
     overflow: hidden;
-    margin-top: 60px;
     margin-bottom: 10px;
     background-color: gainsboro;
 }
@@ -232,6 +231,19 @@ nav >div:hover{
     animation-timing-function: linear;
     animation-direction: reverse;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.scrollstock{
+    animation-duration: 35s;
+}
+.stock{
+    display:inline-flex;
+    align-items: center;
+    margin: 0px;
+    margin-right: 12px;
+    font-size: 1rem;
+}
+.sp{
+    margin-right: 8px;
 }
 @keyframes runing{
     from{translate: -100%}
