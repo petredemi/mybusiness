@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100vw;
-    background-color: rgb(252, 248, 252);
+    background-color: rgba(255, 253, 230, 0.662);
 }
 @font-face {
     font-family: 'font-1';
@@ -245,6 +245,7 @@ nav >div:hover{
 }
 .sp{
     margin-right: 3px;
+    word-spacing: 5px;
 }
 @keyframes runing{
     from{translate: -100%}
@@ -284,7 +285,11 @@ nav >div:hover{
     font-family: font-3;
     padding: 10px;
     background-color: white;
-
+}
+.item1{
+    background-color: beige;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .item >h4{
     font-size: 1.8rem;
@@ -442,6 +447,10 @@ a{
     }
     .items{
         grid-template-columns: 1fr;
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
     .head1 > h3{
         font-size: 1.2rem;

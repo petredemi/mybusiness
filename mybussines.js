@@ -222,7 +222,7 @@ async function finnhubPrice(x, n){
         //    console.log(stock.c)
        // console.log(close)
             let trend = stock.dp
-            symbols[n].textContent = x + ': ' + stock.c + '/ '+ ' '+ stock.dp.toFixed(2) + '%'
+            symbols[n].textContent = x + ': ' + stock.c + ' '+ ' '+ stock.dp.toFixed(2) + '%'
            // prices[n].textContent = stock.c;
            // procent[n].textContent = stock.dp.toFixed(2) + '%'
             console.log(trend)
