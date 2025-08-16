@@ -169,50 +169,47 @@ async function stockPrice(){
         console.log(error)
     };
 }
-
 let simbol1 = document.querySelector('div.simbol1')
-let price1 = document.querySelector('div.price1')
-let procent1 = document.querySelector('div.procent1')
 let img1 = document.querySelector('#img1')
 
 let simbol2 = document.querySelector('div.simbol2')
-let price2 = document.querySelector('div.price2')
-let procent2 = document.querySelector('div.procent2')
 let img2 = document.querySelector('#img2')
 
 let simbol3 = document.querySelector('div.simbol3')
-let price3 = document.querySelector('div.price3')
-let procent3 = document.querySelector('div.procent3')
 let img3 = document.querySelector('#img3')
 
 let simbol4 = document.querySelector('div.simbol4')
-let price4 = document.querySelector('div.price4')
-let procent4 = document.querySelector('div.procent4')
 let img4 = document.querySelector('#img4')
 
 let simbol5 = document.querySelector('div.simbol5')
-let price5 = document.querySelector('div.price5')
-let procent5 = document.querySelector('div.procent5')
 let img5 = document.querySelector('#img5')
 
 let simbol6 = document.querySelector('div.simbol6')
-let price6 = document.querySelector('div.price6')
-let procent6 = document.querySelector('div.procent6')
 let img6 = document.querySelector('#img6')
 
 let simbol7 = document.querySelector('div.simbol7')
-let price7 = document.querySelector('div.price7')
-let procent7 = document.querySelector('div.procent7')
 let img7 = document.querySelector('#img7')
+
+let simbol8 = document.querySelector('div.simbol8')
+let img8 = document.querySelector('#img8')
+
+let simbol9 = document.querySelector('div.simbol9')
+let img9 = document.querySelector('#img9')
+
+let simbol10 = document.querySelector('div.simbol10')
+let img10 = document.querySelector('#img10')
+
+
+
 
 let igr = './icons/trianglered.png'
 let igg = './icons/trianglegreen.png'
 
 
-const symbols = [simbol1, simbol2, simbol3, simbol4, simbol5, simbol6, simbol7 ]
-const prices = [price1, price2, price3, price4, price5, price6, price7]
-const procent = [procent1, procent2, procent3, procent4, procent5, procent6, procent7]
-const imgs = [img1, img2, img3, img4, img5, img6, img7]
+const symbols = [simbol1, simbol2, simbol3, simbol4, simbol5, simbol6, simbol7, simbol8, simbol9, simbol10 ]
+const imgs = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
+
+ 
 
 async function finnhubPrice(x, n){
     try{
@@ -225,11 +222,11 @@ async function finnhubPrice(x, n){
         //    console.log(stock.c)
        // console.log(close)
             let trend = stock.dp
-            symbols[n].textContent = x + ':'
-            prices[n].textContent = stock.c;
-            procent[n].textContent = stock.dp.toFixed(2) + '%'
+            symbols[n].textContent = x + ': ' + stock.c + '/ '+ ' '+ stock.dp.toFixed(2) + '%'
+           // prices[n].textContent = stock.c;
+           // procent[n].textContent = stock.dp.toFixed(2) + '%'
             console.log(trend)
-            if(stock.dp > 0){
+            if(stock.dp >= 0){
             imgs[n].src = igg
             }else if (stock.dp < 0){
                 imgs[n].src = igr
@@ -246,3 +243,6 @@ finnhubPrice('META', 3)
 finnhubPrice('TSLA', 4)
 finnhubPrice('NVDA', 5)
 finnhubPrice('MSFT', 6)
+finnhubPrice('AVGO', 7)
+finnhubPrice('AMD', 8)
+finnhubPrice('IBM', 9)

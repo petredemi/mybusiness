@@ -219,6 +219,7 @@ nav >div:hover{
     overflow: hidden;
     margin-bottom: 10px;
     background-color: gainsboro;
+    max-width: 900px;
 }
 .scrolltext{
     font-size: 1.1rem;
@@ -243,7 +244,7 @@ nav >div:hover{
     font-size: 1rem;
 }
 .sp{
-    margin-right: 8px;
+    margin-right: 3px;
 }
 @keyframes runing{
     from{translate: -100%}
@@ -257,7 +258,8 @@ nav >div:hover{
     align-items: center;
 }
 #myimage{
-    max-width: 430px;
+    max-width: 420px;
+    height: auto;
 }
 .head2 >p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
