@@ -1,8 +1,31 @@
 //const finnhubPetru = new finnhub.DefaultApi('d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg')
+let simbol11 = document.querySelector('div.simbol11')
 
-//finnhubPetru.stockTick("AAPL", "2025-08-08", 500, 0, (error, data, response) => {
-    //console.log(data);
-//});
+const socket = new WebSocket('wss://ws.finnhub.io?token=d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg');
+
+// Connection opened -> Subscribe
+socket.addEventListener('open', function (event) {
+   // socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'AAPL'}))
+    socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:BTCUSDT'}))
+    //socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:ETHUSDT'}))
+});
+
+// Listen for messages
+socket.addEventListener('message', function (event) {
+  //  console.log('Message from server ', event.data);
+  let ee = JSON.parse(event.data)
+  let pp = ee.data[0].p.toFixed(2)
+  let price = pp.toString()
+    simbol11.textContent = 'BITCOIN' + ' ' + '$'+ price.substr(0, 3) + ',' + price.substr(3)
+});
+
+// Unsubscribe
+ var unsubscribe = function(symbol) {
+    socket.send(JSON.stringify({'type':'unsubscribe','symbol': symbol}))
+}
+
+
+
 const homebtn = document.querySelector('div.home')
 const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
@@ -199,33 +222,46 @@ let img9 = document.querySelector('#img9')
 let simbol10 = document.querySelector('div.simbol10')
 let img10 = document.querySelector('#img10')
 
-
+let marketstatus = document.querySelector('div.marketstatus')
 
 
 let igr = './icons/trianglered.png'
 let igg = './icons/trianglegreen.png'
+let timedisplay = document.querySelector('div.time')
 
+function localTime(){
+        const dd = new Date()
+        dd.setHours(-6)
+        const hour = dd.getHours()
+        const min = dd.getMinutes()
+        timedisplay.textContent = 'Local time: ' + hour + ' : ' + min
+}
+ setInterval(localTime, 1000)
 
 const symbols = [simbol1, simbol2, simbol3, simbol4, simbol5, simbol6, simbol7, simbol8, simbol9, simbol10 ]
 const imgs = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
-
+const shares = ['AMZN', 'AAPL', 'GOOG', 'META', 'TSLA', 'NVDA', 'MSFT', 'AVGO', 'AMD', 'IBM']
  
 
 async function finnhubPrice(x, n){
     try{
        const response = await fetch(`https://finnhub.io/api/v1/quote?symbol=${x}&exchange=US&token=d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg`, {mode:'cors'});
-       const stock = await response.json();      
-        if(!response.ok){
+       const openstatus = await fetch(`https://finnhub.io/api/v1/stock/market-status?exchange=US&token=d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg`, {mode:'cors'});
+       const stock = await response.json();
+       const open = await openstatus.json()   
+     //  console.log(open)   
+        if(!response.ok || !openstatus){
             throw 'no data'
         }else{
-            console.log(stock)
-        //    console.log(stock.c)
-       // console.log(close)
-            let trend = stock.dp
+          //  console.log(stock)
+          let openclosed 
+            if(open.isOpen == false){
+                 openclosed = 'Closed'
+            }else if(open.isOpen == true){
+                openclosed = 'Open'
+            }
             symbols[n].textContent = x + ': ' + stock.c + ' '+ ' '+ stock.dp.toFixed(2) + '%'
-           // prices[n].textContent = stock.c;
-           // procent[n].textContent = stock.dp.toFixed(2) + '%'
-            console.log(trend)
+            marketstatus.textContent = 'US Markets: ' + openclosed
             if(stock.dp >= 0){
             imgs[n].src = igg
             }else if (stock.dp < 0){
@@ -236,13 +272,6 @@ async function finnhubPrice(x, n){
         console.log(error)
     };
 }
-finnhubPrice('AMZN', 0)
-finnhubPrice('AAPL', 1)
-finnhubPrice('GOOG', 2)
-finnhubPrice('META', 3)
-finnhubPrice('TSLA', 4)
-finnhubPrice('NVDA', 5)
-finnhubPrice('MSFT', 6)
-finnhubPrice('AVGO', 7)
-finnhubPrice('AMD', 8)
-finnhubPrice('IBM', 9)
+for (let i = 0; i < shares.length; i++){
+    finnhubPrice(shares[i], i)
+}
