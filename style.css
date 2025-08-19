@@ -222,7 +222,11 @@ nav >div:hover{
 }
 .statusandtime{
     margin-top: 55px;
+    margin-bottom: 3px;
     display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.crypto{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .scroll{

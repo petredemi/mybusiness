@@ -1,5 +1,6 @@
 //const finnhubPetru = new finnhub.DefaultApi('d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg')
 let simbol11 = document.querySelector('div.simbol11')
+let simbol12 = document.querySelector('div.simbol12')
 
 const socket = new WebSocket('wss://ws.finnhub.io?token=d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg');
 
@@ -7,16 +8,22 @@ const socket = new WebSocket('wss://ws.finnhub.io?token=d2c3hr9r01qvh3vdtos0d2c3
 socket.addEventListener('open', function (event) {
    // socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'AAPL'}))
     socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:BTCUSDT'}))
-    //socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:ETHUSDT'}))
+    socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:ETHUSDT'}))
 })
 
 // Listen for messages
 socket.addEventListener('message', function (event) {
    // console.log('Message from server ', event.data);
   let ee = JSON.parse(event.data)
+  let coin = ee.data[0].s
   let pp = ee.data[0].p.toFixed(2)
   let price = pp.toString()
-    simbol11.textContent = 'BITCOIN' + ' ' + '$'+ price.substr(0, 3) + ',' + price.substr(3)
+  if (coin == 'BINANCE:BTCUSDT'){
+        simbol11.textContent = 'BITCOIN:' + ' ' + '$'+ price.substr(0, 3) + ',' + price.substr(3)
+    } else if (coin == 'BINANCE:ETHUSDT'){
+        simbol12.textContent = 'ETHER:' + ' ' + '$'+ price//.substr(0, 3) + ',' + price.substr(3)
+    }
+
 })
 
 // Unsubscribe
@@ -234,13 +241,13 @@ function localTime(){
         const hour = dd.getHours()
         let nyhour 
         if( hour == 0){nyhour = 19}
-        else if( hour == 1){nyhour = 20}
-        else if ( hour ==2){nyhour = 21}
+        else if( hour == 1){ nyhour = 20}
+        else if ( hour ==2){ nyhour = 21}
         else if( hour == 3){ nyhour = 22}
         else if (hour == 4){ nyhour = 23}
         else{ nyhour =  hour - 5}
         const min = '0' + dd.getMinutes()
-        timedisplay.textContent = 'Local time: ' + nyhour+ ' : ' + min.slice(-2)
+        timedisplay.textContent = 'NewYork time: ' + nyhour+ ' : ' + min.slice(-2)
 }
  setInterval(localTime, 1000)
 
