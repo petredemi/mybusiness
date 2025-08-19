@@ -8,16 +8,16 @@ socket.addEventListener('open', function (event) {
    // socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'AAPL'}))
     socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:BTCUSDT'}))
     //socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'BINANCE:ETHUSDT'}))
-});
+})
 
 // Listen for messages
 socket.addEventListener('message', function (event) {
-  //  console.log('Message from server ', event.data);
+   // console.log('Message from server ', event.data);
   let ee = JSON.parse(event.data)
   let pp = ee.data[0].p.toFixed(2)
   let price = pp.toString()
     simbol11.textContent = 'BITCOIN' + ' ' + '$'+ price.substr(0, 3) + ',' + price.substr(3)
-});
+})
 
 // Unsubscribe
  var unsubscribe = function(symbol) {
@@ -231,10 +231,16 @@ let timedisplay = document.querySelector('div.time')
 
 function localTime(){
         const dd = new Date()
-        dd.setHours(-6)
         const hour = dd.getHours()
-        const min = dd.getMinutes()
-        timedisplay.textContent = 'Local time: ' + hour + ' : ' + min
+        let nyhour 
+        if( hour == 0){nyhour = 19}
+        else if( hour == 1){nyhour = 20}
+        else if ( hour ==2){nyhour = 21}
+        else if( hour == 3){ nyhour = 22}
+        else if (hour == 4){ nyhour = 23}
+        else{ nyhour =  hour - 5}
+        const min = '0' + dd.getMinutes()
+        timedisplay.textContent = 'Local time: ' + nyhour+ ' : ' + min.slice(-2)
 }
  setInterval(localTime, 1000)
 
