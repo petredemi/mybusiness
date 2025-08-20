@@ -254,13 +254,13 @@ nav >div:hover{
     display:inline-flex;
     align-items: center;
     margin: 0px;
-    margin-right: 12px;
+    margin-right: 10px;
     font-size: 1rem;
 }
 .sp{
-    margin-right: 3px;
     word-spacing: 5px;
 }
+
 @keyframes runing{
     from{translate: -100%}
     to{
