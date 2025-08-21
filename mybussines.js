@@ -295,6 +295,11 @@ async function finnhubPrice(x, n){
         console.log(error)
     };
 }
-for (let i = 0; i < shares.length; i++){
-    finnhubPrice(shares[i], i)
+function updatePrices(){
+    for (let i = 0; i < shares.length; i++){
+        finnhubPrice(shares[i], i)
+    }
 }
+updatePrices()
+setInterval( updatePrices, 100000)
+
