@@ -258,6 +258,7 @@ function localTime(){
         else{ nyhour =  hour - 5}
         const min = '0' + dd.getMinutes()
         timedisplay.textContent = 'NewYork time: ' + nyhour+ ' : ' + min.slice(-2)
+        console.log(nyhour)
 }
  setInterval(localTime, 1000)
 
@@ -276,7 +277,7 @@ async function finnhubPrice(x, n){
         if(!response.ok || !openstatus){
             throw 'no data'
         }else{
-          //  console.log(stock)
+            console.log(stock)
           let openclosed 
             if(open.isOpen == false){
                  openclosed = 'Closed'
@@ -296,10 +297,15 @@ async function finnhubPrice(x, n){
     };
 }
 
+function stockPrices(){
+            for (let i = 0; i < shares.length; i++){
+                finnhubPrice(shares[i], i)
+            }
+}
 function updatePrices(){
     let weekday = new Date()
     let x = weekday.getDay()
-    if ( x > 0 &&  x < 6){
+    if ( x > 0 && x < 6 ){
         if( nyhour > 8 && nyhour < 16){
             for (let i = 0; i < shares.length; i++){
                 finnhubPrice(shares[i], i)
@@ -307,6 +313,7 @@ function updatePrices(){
         }
     }
 }
-updatePrices()
-setInterval( updatePrices, 100000)
+
+stockPrices()
+setInterval( updatePrices, 10000)
 
