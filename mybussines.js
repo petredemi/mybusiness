@@ -245,11 +245,11 @@ let marketstatus = document.querySelector('div.marketstatus')
 let igr = './icons/trianglered.png'
 let igg = './icons/trianglegreen.png'
 let timedisplay = document.querySelector('div.time')
+let nyhour = 1
 
 function localTime(){
         const dd = new Date()
         const hour = dd.getHours()
-        let nyhour 
         if( hour == 0){nyhour = 19}
         else if( hour == 1){ nyhour = 20}
         else if ( hour ==2){ nyhour = 21}
@@ -295,9 +295,16 @@ async function finnhubPrice(x, n){
         console.log(error)
     };
 }
+
 function updatePrices(){
-    for (let i = 0; i < shares.length; i++){
-        finnhubPrice(shares[i], i)
+    let weekday = new Date()
+    let x = weekday.getDay()
+    if ( x > 0 &&  x < 6){
+        if( nyhour > 8 && nyhour < 16){
+            for (let i = 0; i < shares.length; i++){
+                finnhubPrice(shares[i], i)
+            }
+        }
     }
 }
 updatePrices()
