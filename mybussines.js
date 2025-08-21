@@ -315,5 +315,5 @@ function updatePrices(){
 }
 
 stockPrices()
-setInterval( updatePrices, 10000)
+setInterval( updatePrices, 100000)
 
