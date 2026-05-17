@@ -3,6 +3,8 @@ body{
     padding: 0px;
     width: 100vw;
     background-color: rgba(243, 237, 221, 0.662);
+    line-height: 1.5;
+    letter-spacing: 1.5px;
     background: linear-gradientt(220deg, white, rgba(154, 154, 154, 0.884), white, rgba(170, 170, 170, 0.861), white, rgb(200, 200, 200), white);
 }
 @font-face {
@@ -263,6 +265,20 @@ nav >div:hover{
     margin: 10px;
     line-height: 1.4;
 }
+.newblog{
+    box-shadow: 1px 1px 6px black;
+    padding: 10px;
+    margin-top: 20px;
+}
+.newblog >h4{
+    color: red;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px black;
+}
+.newblog >h4::first-letter{
+    font-size: 2.5rem;
+    color: blueviolet;
+}
 
 .items{
     display: grid;
@@ -281,6 +297,7 @@ nav >div:hover{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
     background-color: white;
+    display: nonee;
 }
 .item1{
     background-color: beige;

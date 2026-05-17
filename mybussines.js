@@ -1,4 +1,4 @@
-//const finnhubPetru = new finnhub.DefaultApi('d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg')
+
 let simbol11 = document.querySelector('div.simbol11')
 let simbol12 = document.querySelector('div.simbol12')
 
