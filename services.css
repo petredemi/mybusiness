@@ -31,7 +31,6 @@
 }
 .servicespage p{
     line-height: 1.4;
-
     margin: 1px;
     color: rgb(25, 5, 45);
 }
@@ -41,7 +40,7 @@
     text-align: center;
 }
 .port p{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

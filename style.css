@@ -4,7 +4,7 @@ body{
     width: 100vw;
     background-color: rgba(243, 237, 221, 0.662);
     line-height: 1.5;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     background: linear-gradientt(220deg, white, rgba(154, 154, 154, 0.884), white, rgba(170, 170, 170, 0.861), white, rgb(200, 200, 200), white);
 }
 @font-face {
@@ -269,15 +269,19 @@ nav >div:hover{
     box-shadow: 1px 1px 6px black;
     padding: 10px;
     margin-top: 20px;
+    padding-top: 2px;
 }
 .newblog >h4{
     color: red;
     font-size: 1.2rem;
     text-shadow: 1px 1px 2px black;
+    margin: 1px;
 }
 .newblog >h4::first-letter{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: blueviolet;
+    margin-bottom: 1px;
+    margin-top: 1px;
 }
 
 .items{

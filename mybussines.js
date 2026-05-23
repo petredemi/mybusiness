@@ -18,16 +18,16 @@ socket.addEventListener('message', function (event) {
    // console.log('Message from server ', event.data);
   let ee = JSON.parse(event.data)
   let coin = ee.data[0].s
+  console.log(coin)
   let pp = ee.data[0].p.toFixed(2)
-  let price = pp.toString()
   if (coin == 'BINANCE:BTCUSDT'){
-        simbol11.textContent =' $'+ price.substr(0, 3) + ',' + price.substr(3)
+        simbol11.textContent =' $'+  Number(pp).toLocaleString()
         if (pp - btctrend > 0){ simbol11.style.backgroundColor = 'rgb(8, 200, 8)'}
         else if( pp - btctrend < 0) { simbol11.style.backgroundColor = 'rgba(251, 56, 56, 0.76)'}
         else{ simbol11.style.backgroundColor = 'white'}
         btctrend = pp
     } else if (coin == 'BINANCE:ETHUSDT'){
-        simbol12.textContent = ' $'+ price//.substr(0, 3) + ',' + price.substr(3)
+        simbol12.textContent = ' $'+ pp //price//.substr(0, 3) + ',' + price.substr(3)
         if (pp - ethtrend > 0){ simbol12.style.backgroundColor = 'rgb(8, 200, 8)'}
         else if( pp - ethtrend < 0) { simbol12.style.backgroundColor = 'rgba(251, 56, 56, 0.76)'}
         else { simbol12.style.backgroundColor = 'white'}
@@ -258,7 +258,7 @@ function localTime(){
         else{ nyhour =  hour - 5}
         const min = '0' + dd.getMinutes()
         timedisplay.textContent = 'NewYork time: ' + nyhour+ ' : ' + min.slice(-2)
-        console.log(nyhour)
+        //console.log(nyhour)
 }
  setInterval(localTime, 1000)
 
