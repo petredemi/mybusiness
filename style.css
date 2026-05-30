@@ -86,13 +86,13 @@ body{
     
 }
 .toppage{
-    background-color:rgb(27, 8, 48);
     position: fixed;
     width: 100vw;
     z-index: 2;
     top: 0;
     margin-bottom: 0px;
     box-shadow: 1px 1px 10px black;
+    background-color: rgba(9, 15, 49);
 }
 .top{
     padding: 5px;
@@ -146,8 +146,7 @@ nav >div:hover{
 .back{
     margin: 0px;
     margin-top: 20px;
-    background-color: rgb(169, 185, 251)dd;
-    background-image: linear-gradient(90deg, rgba(9, 15, 49, 0.953) 20%, rgba(255, 254, 254, 0.538), rgba(9, 15, 49, 0.953) 80%);
+    background-image: linear-gradienttt(90deg, rgba(9, 15, 49, 0.953) 20%, rgba(255, 254, 254, 0.538), rgba(9, 15, 49, 0.953) 80%);
 
 }
 .firstpage{
@@ -227,6 +226,7 @@ nav >div:hover{
     margin-bottom: 10px;
     background-color:blanchedalmond;
     max-width: 900px;
+    box-shadow: 1px 1px 4px black;
 }
 .scrolltext{
     font-size: 1rem;
@@ -239,6 +239,7 @@ nav >div:hover{
     animation-timing-function: linear;
     animation-direction: reverse;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 .scrollstock{
     animation-duration: 35s;
@@ -408,7 +409,7 @@ footer{
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: rgb(43, 30, 52);
+    background-color: rgba(9, 15, 49);
     margin: auto;
     color: white;
     bottom: 0;
