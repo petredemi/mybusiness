@@ -176,7 +176,7 @@ nav >div:hover{
     background-position: 1%  2ss;
     background-repeat: no-repeat;
     background-color:  rgbas(9, 15, 49);
-    margin-top: 200px;
+    margin-top: 0px;
 
 }
 .first1{
@@ -232,8 +232,8 @@ nav >div:hover{
 
 }
 .pagehead >h3{
-    margin: 20px;
     margin-bottom: 1px;
+    margin-top: 40px;
     font-size: 1.3rem;
     font-family: font-2;
 }
