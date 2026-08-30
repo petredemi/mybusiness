@@ -201,7 +201,7 @@ nav >div:hover{
     margin: auto;
     position: relative;
     width: 900px;
-    margin-top: 50px;
+    margin-top: 30px;
     background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.997)40%, rgba(255, 254, 254, 0.294), white);
 }
 .newbackground{
@@ -236,6 +236,7 @@ nav >div:hover{
     margin-top: 40px;
     font-size: 1.3rem;
     font-family: font-2;
+    color: var(--text-muted);
 }
 .pagehead >p{
     margin-top: 1px;
@@ -262,7 +263,7 @@ nav >div:hover{
     box-shadow: 2px 2px 6px black;
 }
 .marketstatus{
-    margin-left: 10px;
+    margin-left: 1px;
 }
 .crypto p, .statusandtime{
     color: var(--text-muted); 
