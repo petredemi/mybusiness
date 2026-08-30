@@ -1,11 +1,23 @@
+:root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
 body{
     margin: 0px;
     padding: 0px;
     width: 100vw;
-    background-color:rgba(234, 229, 182, 0.436);
+    background-color:rgb(255, 255, 255);
     line-height: 1.5;
     letter-spacing: 1px;
-    background: linear-gradient(120deg, rgb(70, 66, 68), rgb(255, 255, 255))ss;
 }
 @font-face {
     font-family: 'font-1';
@@ -93,15 +105,20 @@ body{
     margin-bottom: 0px;
     box-shadow: 1px 1px 10px black;
     background-color: rgba(9, 15, 49);
+    min-height: 80px;
+    display: flex;
+    align-items:end;
+    justify-content:right;
 }
 .top{
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 90%;
+    width: 90%;
     margin: auto;
     margin-bottom: 1px;
+    height: auto;
 }
 nav{
     display: flex;
@@ -116,8 +133,8 @@ nav >div{
     margin-left: 10px;
     margin-bottom: 1px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.1rem;
-    color:whitesmoke;
+    font-size: 1.2rem;
+    color: var(--text-muted);
     font-weight: 600;
     height: fit-content;
     border-radius: 5px;
@@ -157,7 +174,8 @@ nav >div:hover{
     background-size:contain;
     background-position: 1%  2ss;
     background-repeat: no-repeat;
-    margin-top: 50px;
+    background-color:  rgba(9, 15, 49);
+    margin-top: 200px;
 
 }
 .first1{
@@ -174,11 +192,16 @@ nav >div:hover{
     text-align: center;
 
 }
+.first1 span{
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:rgb(178, 139, 212);
+}
 .content{
     margin: auto;
     position: relative;
     width: 900px;
-    margin-top: 0px;
+    margin-top: 50px;
     background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.997)40%, rgba(255, 254, 254, 0.294), white);
 }
 .newbackground{
@@ -233,16 +256,27 @@ nav >div:hover{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     word-spacing: 3px;
     margin-top: 10px;
-    background-color:rgb(218, 253, 235);
+    background-color:rgba(133, 132, 135, 0.208);
+    display: flex;
+    flex-wrap: wrap;
     width: fit-content;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 2px 2px 6px black;
 }
+.marketstatus{
+    margin-left: 10px;
+}
+.crypto p, .statusandtime{
+    color: var(--text-muted); 
+}
+.cryptolive{
+    margin-left: 10px;
+}
 .scroll{
     overflow: hidden;
     margin-bottom: 10px;
-    background-color:rgb(252, 243, 229);
+    background-color:rgb(185, 189, 227);
     max-width: 900px;
     box-shadow: 1px 1px 4px black;
 }
@@ -284,6 +318,10 @@ nav >div:hover{
     display: flex;
     align-items: center;
 }
+.head2 strong{
+    color: rgb(178, 139, 212);
+    font-size: 1.5rem;
+}
 #myimage{
     max-width: 420px;
     height: auto;
@@ -293,36 +331,36 @@ nav >div:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 10px;
     line-height: 1.4;
-    color: whitedd;
+    color: whitesmoke;
     box-shadow: 2px 2px 8px black;
-    background-color:rgb(248, 237, 222);
+    background-color:rgba(248, 237, 222, 0.08);
     padding: 8px;
 }
 .newblog{
-    box-shadow: 1px 1px 6px black;
     padding: 10px;
     margin-top: 20px;
     padding-top: 2px;
-    background-color: rgba(0, 0, 0, 0.443);
+    text-align: center;
 }
-.newblog >h4{
-    color: red;
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 2px black;
-    margin: 1px;
+.newblog h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 1.2rem;
+      color: whitesmoke;
+    }
+.newblog >.newsites{
+    margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
 }
-.newblog >h4::first-letter{
-    font-size: 2.1rem;
-    color: blueviolet;
-    margin-bottom: 1px;
-    margin-top: 1px;
-}
-.newsites{
-    color: white;
-}
-.newblog a{
-    color: white;
-}
+.newblog h1 span {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:rgb(178, 139, 212);
+    }
 
 .items{
     display: grid;
@@ -337,36 +375,50 @@ nav >div:hover{
 .item{
     box-shadow: 2px 2px 8px black;
     position: relative;
-    text-align: center;
+    text-align: left;
     height: auto;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 10px;
-    background-image:url("./pictures/football.jpg");
-    opacity: 0.8kk;
-    background-size:contain;
-    background-position:center;
+    padding: 30px;
     color: rgb(255, 255, 255);
-    display: flex;
+    display: flexl;
     flex-direction: column;
+    background-color: rgb(35, 38, 60);
 }
 .item1{
-    background-color: rgba(245, 245, 220, 0.497);
+    text-align: center;
+    background-color:  rgb(35, 38, 60);
     grid-column-start: 1;
     grid-column-end: 3;
-    box-shadow: 2px 2px 8px black;
-    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.939);
+    color: whitesmoke;
 }
 .item >h4{
     font-size: 1.8rem;
     margin-top: 20px;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 3px black;
 }
 .item >p{
     line-height: 1.4;
     font-size: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
 }
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-list li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+    }
 .intro{
     position: relative;
     display: flex;
@@ -439,18 +491,19 @@ footer{
     color: white;
     bottom: 0;
     padding: 8px;
+    border-top: 8px solid rgb(54, 24, 82);
 }
 footer > p{
     margin: auto;
-    margin-bottom: 2px;
-    margin-top: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 a{
-    margin: 0px;
+    margin-bottom: 0px;
 }
 .email_phone{
     margin: auto;
-    margin-bottom: 0px;
+    margin-bottom: 1s0px;
     display: flex;
     align-items: center;
     margin-top:1px;
@@ -464,10 +517,10 @@ a{
     align-items: center;
     width: fit-content;
     margin: auto;
-    margin-top: 0px;
+    margin-top: 10px;
     padding: 0px;
     height: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 @media(max-width: 1050px){
     .firstpage{
@@ -505,7 +558,7 @@ a{
         margin-top: 1px;
     }
     .content{
-        margin-top: 0px;
+        margin-top: 80px;
         background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.339)10%, rgba(255, 254, 254, 0.381),white);
 
     }
@@ -534,20 +587,23 @@ a{
     }
     nav{
         width: 0px;
-        height: 240px;
+        height: 100%;
         position:fixed;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         flex-wrap: wrap;
+        align-items: start;
         right: 0;
-        top: 50px;
-        background-color:rgba(24, 24, 68, 0.751);
+        top: 80px;
+        background-color: rgba(36, 32, 78, 0.698);
         z-index: 2;
+        padding-top: 60px;
     }
     nav >div{
-        margin: 6px;
+        margin: 20px;
         padding: 3px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: whitesmoke;
     }
     nav >div:hover{
     background-color: rgba(106, 232, 144, 0.95);

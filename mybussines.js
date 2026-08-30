@@ -118,7 +118,7 @@ dropbtn.addEventListener('click', (e) => {
     divwidth = toppage.offsetWidth
     if(divwidth < 550){
         if(menu == 0){
-            navbar.setAttribute('style', 'width:160px; transition: width 1s; z-index:3;')
+            navbar.setAttribute('style', 'width:200px; transition: width 1s; z-index:3;')
             menu = 1
         }else{
             navbar.setAttribute('style', 'width: 0px; transition: width 1s;')
@@ -257,7 +257,7 @@ function localTime(){
         else if (hour == 4){ nyhour = 23}
         else{ nyhour =  hour - 5}
         const min = '0' + dd.getMinutes()
-        timedisplay.textContent = 'NewYork time: ' + nyhour+ ' : ' + min.slice(-2)
+        timedisplay.textContent = 'NewYork time: ' + nyhour+ ':' + min.slice(-2) + " o'clock"
         //console.log(nyhour)
 }
  setInterval(localTime, 1000)
