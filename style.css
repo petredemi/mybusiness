@@ -15,7 +15,6 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100vw;
-    background-color:rgb(255, 255, 255);
     line-height: 1.5;
     letter-spacing: 1px;
 }
@@ -103,7 +102,7 @@ body{
     z-index: 2;
     top: 0;
     margin-bottom: 0px;
-    background-color: rgba(9, 15, 49);
+    background-color: rgb(20, 22, 39);
     min-height: 80px;
     display: flex;
     align-items:end;
@@ -163,7 +162,7 @@ nav >div:hover{
 .back{
     margin: 0px;
     margin-top: 0px;
-    background-color:  rgba(9, 15, 49);
+    background-color:  rgb(4, 7, 6);
 
 
 }
@@ -495,12 +494,12 @@ footer{
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: rgba(9, 15, 49);
+    background-color: rgb(10, 12, 10);
     margin: auto;
     color: white;
     bottom: 0;
     padding: 8px;
-    border-top: 8px solid rgb(54, 24, 82);
+    border-top: 8px solid rgb(50, 41, 60);
 }
 footer > p{
     margin: auto;

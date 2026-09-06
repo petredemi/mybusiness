@@ -1,19 +1,121 @@
 
+:root {
+      --bg-dark: #0b0c10;
+      --bg-card: #15171e;
+      --text-main: #f3f4f6;
+      --text-muted: #7e89a1;
+      --accent-primary: #6366f1;
+      --accent-secondary: #a855f7;
+      --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 .servicespage{
     display: none;
     max-width: 1000px;
     margin: auto;
     min-height: 500px;
-    margin-top: 72px;
+    margin-top: 40px;
 }
+
+ .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+.gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+    }
+.hero {
+      padding: 7rem 0 5rem;
+      text-align: center;
+      position: relative;
+    }
+.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.8rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.4rem 0.2rem;
+      border-radius: 9999px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: var(--accent-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 1.5rem;
+      color: whitesmoke;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 680pxx;
+      text-align: center;
+      margin: auto;
+
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
 .port{
     padding: 2px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.port >h3{
-    color: black;
+.port h3{
+    color: rgb(255, 255, 255);
     font-size: 1.2rem;
 }
 .port >p{
@@ -25,13 +127,9 @@
     width: 380px;
     padding: 10px;
     border-radius: 5px;
-    background-image: linear-gradient(145deg, white, rgba(76, 71, 80, 0.403), white, rgba(12, 2, 21, 0.39));
+    color: var(--text-muted);
+    background: var(--bg-card);
 
-}
-.servicespage p{
-    line-height: 1.4;
-    margin: 1px;
-    color: rgb(25, 5, 45);
 }
 
 .servicespage h4{
@@ -65,6 +163,74 @@
 .portfolio >div>img:hover{
     opacity: 50%;
 }
+ .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3.5rem auto;
+      font-size: 1.05rem;
+    }
+
+ .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .portfolio-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-img {
+      height: 220px;
+      background: linear-gradient(135deg, #1e2029, #282a36);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .portfolio-img iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        zoom: 0.6;
+    }
+
+    .portfolio-info {
+      padding: 1.5rem;
+    }
+
+    .portfolio-tag {
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .portfolio-info h3 {
+      margin: 0.35rem 0 0.5rem;
+      font-size: 1.2rem;
+      color: whitesmoke;
+    }
+
 @media(max-width:450px){
     .portfolio >div> img{
         max-width: 370px;
