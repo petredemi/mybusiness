@@ -1,17 +1,18 @@
 
-:root {
-      --bg-dark: #0b0c10;
-      --bg-card: #15171e;
+:root{
+      --bg-dark: #1e202c;
+      --bg-card: #1b1e2d;
       --text-main: #f3f4f6;
       --text-muted: #7e89a1;
       --accent-primary: #6366f1;
       --accent-secondary: #a855f7;
-      --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+      --accent-gradient: linear-gradient(135deg, #3434f3, #a855f7);
       --border-color: rgba(255, 255, 255, 0.08);
       --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --radius: 16px;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    } */
+
 .servicespage{
     display: none;
     max-width: 1000px;
@@ -24,12 +25,6 @@
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
-    }
-.gradient-text {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
     }
 .hero {
       padding: 7rem 0 5rem;
@@ -108,6 +103,12 @@
       flex-wrap: wrap;
       margin-top: 20px;
     }
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color: transparent;
+    }
+
 .port{
     padding: 2px;
     display: flex;
@@ -146,6 +147,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
 }
 .portfolio > div{
     margin-bottom: 10px;
