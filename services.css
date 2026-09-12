@@ -1,9 +1,9 @@
-
+/*
 :root{
       --bg-dark: #1e202c;
-      --bg-card: #1b1e2d;
+      --bg-card: #1b1e2d1b;
       --text-main: #f3f4f6;
-      --text-muted: #7e89a1;
+      --text-muted: #7e89a146;
       --accent-primary: #6366f1;
       --accent-secondary: #a855f7;
       --accent-gradient: linear-gradient(135deg, #3434f3, #a855f7);
@@ -11,14 +11,15 @@
       --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --radius: 16px;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    } */
-
+    } 
+    
+*/
 .servicespage{
     display: none;
     max-width: 1000px;
     margin: auto;
     min-height: 500px;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
  .container {
@@ -27,7 +28,7 @@
       margin: 0 auto;
     }
 .hero {
-      padding: 7rem 0 5rem;
+      padding: 6rem 0 5rem;
       text-align: center;
       position: relative;
     }
@@ -107,6 +108,7 @@
       background: var(--accent-gradient);
       -webkit-background-clip:text;
       -webkit-text-fill-color: transparent;
+      color: rgbd(115, 0, 255);
     }
 
 .port{

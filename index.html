@@ -23,6 +23,7 @@
     <script src="mybussines.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://malsup.github.io/jquery.form.js"></script> 
     <script src="../lib/isInViewport.min.js"></script>
 
 
@@ -347,60 +348,86 @@
 
             </div>
         <div class="formpage">
-            <form name="contact" netlify>
-                <fieldset>
-                    <ul>
-                        <li>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="required">
-                        </li>
-                        <li>
-                            <label for="firma">Company:</label>
-                            <input type="text" id="firma" name="firma">
-                        </li>
-                        <li>
-                            <label for="tel" >Phone:</label>
-                            <input type="number" id="tel" name="tel">
-                        </li>
-                        <li>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required placeholder="myemail@exemple.com">
-                        </li>
-                        <li style="margin-bottom: 1px;">Your Message:</li>
-                        <li style="margin-top: 1px;">
-                        <textarea rows="20" cols="60" id="msg" name="mesaj" placeholder="*leave your message here(required)" required></textarea>
-                        </li>
-                        <div id="btn">
-                           <button type="submit">Send</button>
-                        </div>
-                    </ul>
-                </fieldset>
-            </form>
-            <div class="optionalcontact">
-                    <h1 style="z-index: 3;">Do you want a beautiful website </h1>
-                    <h4>Use the form displayed or the email link below for any query about 
-                        building a website.
-                    </h4>
-                    <br>
-                    <div class="team" >
-                        <h4 style="font-size: 1.2rem; color: darkcyan;">dpcwebdesign team</h4>
-                        <p><strong>We are based in:</strong> London, United Kingdom</p>
+           <main class="container">
+            <header class="header-section">
+              <h1>Let's Build Something Great</h1>
+              <p>Whether you need a high-converting static landing page, a dynamic platform, or a custom web app with an integrated database, let's talk.</p>
+            </header>
+
+            <div class="contact-grid">
+              <!-- Direct Info -->
+              <aside class="info-card">
+                <div>
+                  <div class="info-group">
+                    <h3>Direct Email</h3>
+                    <a href="mailto:hello@agencyname.co.uk">info@dpcwebdesign.uk</a>
+                  </div>
+
+                  <div class="info-group">
+                    <h3>Phone</h3>
+                    <a href="tel:+442079460123">+44 (0)757 285 6262</a>
+                  </div>
+
+                  <div class="info-group">
+                    <h3>Location</h3>
+                    <p>London, United Kingdom</p>
+                  </div>
+
+                  <div class="info-group">
+                    <h3>Availability</h3>
+                    <p>Monday – Friday: 09:00 – 18:00 BST</p>
+                  </div>
+                </div>
+
+                <div class="badge">
+                  <span class="status-dot"></span>
+                  Taking on new projects
+                </div>
+              </aside>
+
+              <!-- Intake Form -->
+              <section class="form-card">
+                <h2>Tell Us About Your Project</h2>
+                <form  id="contactForm" method="POST" netlify>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="name">Your Name *</label>
+                      <input type="text" id="name" name="name" placeholder="Jane Doe" required>
                     </div>
-                    <p >email: info@dpcwebdesign.uk</p>
-                    <div class= email_phone>
-                        <img src="./symbols/phone-outline.svg" alt="">
-                        <p> +44 07572856262</p>
+                    <div class="form-group">
+                      <label for="email">Work Email *</label>
+                      <input type="email" id="email" name="email" placeholder="jane@company.com" required>
                     </div>
-                    <div class="email_phone">
-                        <img src="./symbols/email-outline.svg" alt="" style="margin-right: 15px;">
-                        <a href="mailto:info@dpcwebdesign.uk">info@dpcwebdesign.uk</a>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="company">Company / Startup</label>
+                      <input type="text" id="company" name="company" placeholder="Acme Ltd">
                     </div>
-                    <h5>for exemple, tell us about:</h5>
-                    <p>&#128309; what do you want, business or personal webpage.</p>
-                    <p>&#128309; describe a little bit your business or activity.</p>
-                    <p>&#128309; what do you want to display on the webpage.</p>
-                    <p>&#128309; what do you expect from your webpage.</p>
+                    <div class="form-group">
+                      <label for="service">Project Scope *</label>
+                      <select id="service" name="service" required>
+                        <option value="" disabled selected>Select project type</option>
+                        <option value="static-presentation">Static / Company Presentation Website</option>
+                        <option value="dynamic-blog">Dynamic Website / Blog</option>
+                        <option value="custom-webapp">Custom Web App & Relational Database</option>
+                        <option value="redesign-maintenance">Redesign / Maintenance</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Project Overview *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Briefly describe your goals, required features, or target launch date..." required></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Send Project Details</button>
+                  <div id="confirmationBanner" class="confirmation-banner"></div>   
+                </form>
+              </section>
             </div>
+           </main>
+            
         </div>
         <footer>
             <p>&copy;2025 DPC-Webdesign</p>

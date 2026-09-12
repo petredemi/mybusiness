@@ -57,19 +57,19 @@ const b = './pictures/laptopondesk.jpg';
 const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
 
-const a0 = './pictures/2appledesktops.jpg'
+const a0 = './pictures/barberdesk.jpg'
 const a1 = './pictures/designroom1.jpg'
 const a2 = './pictures/flowersondesck.jpg'
-const a3 = './pictures/interiordesign11.jpg'
+const a3 = './pictures/toolslaptop.jpg'
 const a4 = './pictures/ligthonwall.jpg'
 const a5 = './pictures/iconsmediaapps.jpg'
 const a6 = './pictures/plumberworking.jpg'
-const a7 = './pictures/renewablepannels.jpg'
-const a8 = './pictures/restaurantplateswithfood.jpg'
+const a7 = './pictures/carrepair.jpg'
+const a8 = './pictures/toolsondesk.jpg'
 const a9 = './pictures/painterroll.jpg'
 const a10 = './pictures/hairstylewoman.jpg'
-const a11 = './pictures/drone.jpg';
-const a12 = './pictures/cameras.jpg'
+const a11 = './pictures/electriccarcharge.jpg';
+const a12 = './pictures/restauranttable.jpg'
 
 const laptop = [a, b, c, d]
 const picturemix = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12]
@@ -314,6 +314,44 @@ function updatePrices(){
     }
 }
 
-stockPrices()
-setInterval( updatePrices, 100000)
+    stockPrices()
+    setInterval( updatePrices, 100000)
+    const banner = document.getElementById('confirmationBanner');
+    $("#contactForm").off('submit').submit(function(){
+           // e.preventDefault()
+           // let name = $('#name').val()
+           // let email = $('#email').val()
+           // let company = $('#company').val()
+           // let service = $('#service').val()
+           // let message = $('#message').val()
+             $(this).ajaxSubmit({
+              headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/x-www-form-urlencoded",
+              ////      "ContentType": "application/json",
+                },
+               data: {
+                },
+               success: function(response){
+                console.log('succes'); 
+                banner.style.display = 'block';
+                banner.style.color = 'var(--accent)';
+                banner.style.color = 'green';
+                banner.style.borderColor = 'var(--accent)';
+                banner.textContent = "Multumim! Formularul a fost transmis cu succes!" 
+               },
+                error: (error) => {
+                console.log(error);
+                console.log('error loading')
+                banner.style.display = 'block';
+                banner.style.color = 'var(--accent)';
+                banner.style.color = 'red';
+                banner.style.borderColor = 'var(--accent)';
+                banner.textContent = 'Formularul nu a reusit sa fie trimis. Va rugam mai incercati odata!' 
+                },
+           });
+         $('#contactForm')[0].reset()
+             return false;
+    }); 
+
 

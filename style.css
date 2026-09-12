@@ -1,23 +1,52 @@
-/* :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --surface-border: #334155;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --radius: 12px;
-      --transition: all 0.3s ease;
+ 
+   /*
+    :root {
+      --bg: #1016243a;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+      --text-main: #040912;
+      --text-muted: #9ca3af;
     }
-*/
+    */
+:root{
+      --bg-color: #0f172a;
+      --accent: #2563eb;
+      --card-bg: #1e293b;
+
+      --bg-dark: #1e202c29;
+      --bg-card: #1b1e2d;
+      --text-main: #f3f4f6;
+      --text-muted: #7e89a1;
+      --accent-primary: #4a4df7;
+      --accent-secondary: #ed36de;
+      --accent-gradient: linear-gradient(135deg, #423cf3, #ea24a8);
+      --border-color: rgba(93, 101, 135, 0.992);
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    } 
 body{
     margin: 0px;
     padding: 0px;
     width: 100vw;
     line-height: 1.5;
     letter-spacing: 1px;
+    background-color: var(--bg-color);
+
 }
+* {
+      box-sizing: border-box;
+    }
+.bodyh {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    } 
 @font-face {
     font-family: 'font-1';
     src: url('./fonts/font-1.ttf');
@@ -162,10 +191,9 @@ nav >div:hover{
 .back{
     margin: 0px;
     margin-top: 0px;
-    background-color:  rgb(4, 7, 6);
-
-
+    background-color: var(--bg-color);
 }
+
 .firstpage{
     background-image: url('./pictures/mobile1.jpg')cc;
     max-width: 100vw;
@@ -176,6 +204,8 @@ nav >div:hover{
     background-repeat: no-repeat;
     background-color:  rgbas(9, 15, 49);
     margin-top: 0px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
 
 }
 .first1{
@@ -191,17 +221,16 @@ nav >div:hover{
     text-align: center;
 
 }
-.first1 span{
-    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:rgb(178, 139, 212);
+.pagehead h1 span{
+    color: rgb(84, 179, 230);
+    -webkit-background-clip: textt;
+    -webkit-text-fill-color:transparentt;
 }
 .content{
     margin: auto;
     position: relative;
     width: 900px;
     margin-top: 30px;
-    background-image: linear-gradientt(90deg, rgba(255, 255, 255, 0.997)40%, rgba(255, 254, 254, 0.294), white);
 }
 .newbackground{
     margin: auto;
@@ -225,7 +254,6 @@ nav >div:hover{
     height: auto;
     padding-top: 30px;
     padding-bottom: 50px;
-    color: white;
     text-align: center;
     text-shadow: 1px 1px 1px rgb(132, 130, 130);
 
@@ -316,7 +344,7 @@ nav >div:hover{
     align-items: center;
 }
 .head2 strong{
-    color: rgb(178, 139, 212);
+    color: rgb(143, 135, 150);
     font-size: 1.5rem;
 }
 #myimage{
@@ -354,9 +382,10 @@ nav >div:hover{
       max-width: 600px;
 }
 .newblog h1 span {
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      background: linear-gradienyt(135deg, #38bdf8 0%, #818cf8 100%);
+       background:var(--accent-gradient);
       -webkit-background-clip: text;
-      -webkit-text-fill-color:rgb(178, 139, 212);
+      -webkit-text-fill-color:transparent;
     }
 
 .items{
