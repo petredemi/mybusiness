@@ -48,6 +48,7 @@ const servbtn = document.querySelector('div.serv')
 const contactbtn = document.querySelector('div.contact')
 const formbtn = document.querySelector('div.form')
 const dropbtn = document.querySelector('.drop')
+const btnabout = document.querySelector('.btnabout')
 //let apikey = GZ525I3MQ8WMVOXK  //alpha vantage.co 
 // finnhab apikey = d2c3hr9r01qvh3vdtos0d2c3hr9r01qvh3vdtosg
 //finnhab secret : d2c3hr9r01qvh3vdtotg
@@ -90,6 +91,7 @@ const navbar = document.querySelector('nav')
 const dropmenu = document.querySelector('.dropmenu') 
 const toppage = document.querySelector('.toppage')
 const menuicon = document.querySelector('.b')
+const body = document.querySelector('body')
 
 let divwidth = toppage.offsetWidth //width of div - unused
 //function mediaQ(x){
@@ -168,6 +170,7 @@ contactbtn.addEventListener('click', (e) => {
     firstpage.setAttribute('style', 'display: none')
     servicespage.setAttribute('style', 'display: none')
     contactpage.setAttribute('style', 'display: block')
+    body.setAttribute('style', 'background: #f8fafc')
     formpage.setAttribute('style', 'display: none')
 
     contactbtn.setAttribute('style', 'color: red')
@@ -186,6 +189,18 @@ formbtn.addEventListener('click', (e) => {
     servbtn.setAttribute('style', 'color: white')
     contactbtn.setAttribute('style', 'color:white')
 })
+btnabout.addEventListener('click', (e) => {
+    firstpage.setAttribute('style', 'display: none')
+    servicespage.setAttribute('style', 'display: none')
+    contactpage.setAttribute('style', 'display: none')
+    formpage.setAttribute('style', 'display: flex;')
+
+    formbtn.setAttribute('style', 'color: red')
+    homebtn.setAttribute('style', 'color: white')
+    servbtn.setAttribute('style', 'color: white')
+    contactbtn.setAttribute('style', 'color:white')
+})
+
 
 async function stockPrice(){
     try{
