@@ -83,6 +83,9 @@ body{
         font-weight: 600;
         font-style: normal;
 }
+.top > a{
+    text-decoration: none;
+}
 .h0{
     font-size: 2rem;
     font-weight: 800;
@@ -311,9 +314,10 @@ nav >div:hover{
 .scroll{
     overflow: hidden;
     margin-bottom: 10px;
-    background-color:rgb(185, 189, 227);
+    background-color:rgba(32, 82, 54, 0.378);
     max-width: 900px;
     box-shadow: 1px 1px 4px black;
+    color: var(--text-muted);
 }
 .scrolltext{
     font-size: 1rem;
