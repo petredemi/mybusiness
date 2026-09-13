@@ -58,25 +58,25 @@ const b = './pictures/laptopondesk.jpg';
 const c = './pictures/laptoppink.jpg';
 const d = './pictures/laptopgraph.jpg';
 
-const a0 = './pictures/barberdesk.jpg'
-const a1 = './pictures/designroom1.jpg'
-const a2 = './pictures/flowersondesck.jpg'
-const a3 = './pictures/toolslaptop.jpg'
-const a4 = './pictures/ligthonwall.jpg'
-const a5 = './pictures/iconsmediaapps.jpg'
-const a6 = './pictures/plumberworking.jpg'
-const a7 = './pictures/carrepair.jpg'
-const a8 = './pictures/toolsondesk.jpg'
-const a9 = './pictures/painterroll.jpg'
-const a10 = './pictures/hairstylewoman.jpg'
-const a11 = './pictures/electriccarcharge.jpg';
-const a12 = './pictures/restauranttable.jpg'
+const a0 = './pictures/blog.jpeg'
+const a1 = './pictures/cafe.jpeg'
+const a2 = './pictures/catering.jpeg'
+const a3 = './pictures/food.jpeg'
+const a4 = './pictures/hotel.jpeg'
+const a5 = './pictures/interiordesign.jpeg'
+const a6 = './pictures/nature.jpeg'
+//const a7 = './pictures/nature.jpeg'
+//const a8 = './pictures/plumberworking.jpg'
+//const a9 = './pictures/painterroll.jpg'
+//const a10 = './pictures/flowersondesk.jpg'
+//const a11 = './pictures/electriccarcharge.jpg';
+//const a12 = './pictures/carrepair.jpg'
 
 const laptop = [a, b, c, d]
-const picturemix = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12]
+const picturemix = [a0, a1, a2, a3, a4, a5, a6 ]  //a7, a8, a9, a10, a11, a12]
 let run = 0;
 function changeimg(){
-    if( run == 13){ run = 0}
+    if( run == 7){ run = 0}
     myimage.src = picturemix[run]
   //  myimage.setAttribute('style', 'max-width: 450px; transition: width 1s')
     run += 1

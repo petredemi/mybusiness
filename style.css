@@ -317,7 +317,7 @@ nav >div:hover{
     background-color:rgba(32, 82, 54, 0.378);
     max-width: 900px;
     box-shadow: 1px 1px 4px black;
-    color: var(--text-muted);
+    color: var(--text-main);
 }
 .scrolltext{
     font-size: 1rem;
